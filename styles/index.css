@@ -5,6 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #0a121f;
   color: #e9f2ff;
+  scroll-behavior: smooth;
 }
 
 header {
