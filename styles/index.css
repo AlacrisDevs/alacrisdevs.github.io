@@ -153,7 +153,6 @@ p {
 
 .flex-item {
   flex: 0 0 calc(25% - 20px);
-  /* 4 items in a row, accounting for gap */
   overflow: hidden;
 }
 
@@ -161,7 +160,6 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  /* Remove extra space below images */
 }
 
 .caption-black {
@@ -169,11 +167,8 @@ p {
   left: 0;
   right: 0;
   color: #0a121f;
-  /* Text color for captions */
   padding: 8px 0;
   text-align: center;
-  border-radius: 0 0 10px 10px;
-  /* Rounded bottom corners for captions */
 }
 
 .caption-white {
@@ -184,9 +179,7 @@ p {
   /* Text color for captions */
   padding: 8px 0;
   text-align: center;
-  border-radius: 0 0 10px 10px;
-  /* Rounded bottom corners for captions */
-}
+} 
 
 #contact {
   background: linear-gradient(to bottom, #0a121f 0%, #0a121f 90%, #000000 100%);
