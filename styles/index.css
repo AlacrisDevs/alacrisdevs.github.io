@@ -15,6 +15,14 @@ header {
   align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  nav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -85,7 +93,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   /* Roboto Regular */
-  font-size: 16px;
+  font-size: 20px;
   /* Adjust the font size as needed */
 }
 
@@ -188,13 +196,23 @@ p {
 }
 
 
-.contact-link {
+.link-white {
   color: #e9f2ff;
   text-decoration: underline;
   transition: color 0.3s;
 }
 
-.contact-link:hover {
+.link-white:hover {
+  color: #006cff;
+}
+
+.link-black {
+  color: #0a121f;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.link-black:hover {
   color: #006cff;
 }
 
