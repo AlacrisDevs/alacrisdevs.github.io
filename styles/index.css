@@ -42,23 +42,22 @@ nav ul li {
 
 nav a {
   text-decoration: none;
+  background-color: #0a121f;
   color: #e9f2ff;
   font-weight: 900;
   font-family: "Raleway", sans-serif;
   padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
   transition: background-color 0.3s ease;
   font-size: 18px;
 }
 
 nav a:hover {
-  background-color: #13223b;
-  color: #e9f2ff;
-}
-
-nav a.selected {
   background-color: #006cff;
   color: #e9f2ff;
 }
+
 
 .section {
   padding: 50px;
@@ -138,7 +137,7 @@ p {
 }
 
 #gallery h1,
-#organizations h1 {
+#orgs h1 {
   text-align: center;
 }
 
