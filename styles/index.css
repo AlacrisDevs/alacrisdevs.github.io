@@ -107,13 +107,14 @@ p {
 
 .bio-image,
 .contact-image {
-  width: 50%;
+  float: right;
+  width: 40%;
   /* Adjust the width as needed */
 }
 
 .bio-image img,
 .contact-image img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -137,62 +138,55 @@ p {
 }
 
 #gallery h1,
-#orgs h1 {
+#organizations h1 {
   text-align: center;
 }
 
-/* Gallery styles */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-}
-
-/* Organizations styles */
-.organizations {
+.flex-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
   gap: 20px;
+  /* Adjust the gap as needed */
+  justify-content: space-between;
+  /* Distribute items evenly */
 }
 
-.organization-item {
-  flex: 0 0 calc(33.33% - 20px);
+.flex-item {
+  flex: 0 0 calc(25% - 20px);
+  /* 4 items in a row, accounting for gap */
   overflow: hidden;
-  border-radius: 10px;
-  position: relative;
 }
 
-.organization-item img {
+.flex-item img {
   width: 100%;
   height: auto;
   display: block;
+  /* Remove extra space below images */
 }
 
-.caption {
-  color: #0a121f;
-  padding: 8px 12px;
-  position: absolute;
+.caption-black {
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  color: #0a121f;
+  /* Text color for captions */
+  padding: 8px 0;
   text-align: center;
   border-radius: 0 0 10px 10px;
+  /* Rounded bottom corners for captions */
 }
 
+.caption-white {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #e9f2ff;
+  /* Text color for captions */
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  /* Rounded bottom corners for captions */
+}
 
 #contact {
   background: linear-gradient(to bottom, #0a121f 0%, #0a121f 90%, #000000 100%);
@@ -200,10 +194,6 @@ p {
   padding: 50px;
 }
 
-.contact-image {
-  float: right;
-  width: 50%;
-}
 
 .contact-link {
   color: #e9f2ff;
