@@ -1,15 +1,235 @@
-h1 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #0a121f;
   color: #e9f2ff;
 }
 
-h2 {
+header {
+  background-color: #0a121f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+  margin-right: 25px;
+}
+
+.logo h1 {
+  font-size: 40px;
+  color: #e9f2ff;
+  margin: 0;
+  font-weight: 900;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e9f2ff;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: #13223b;
+  color: #e9f2ff;
+}
+
+nav a.selected {
+  background-color: #006cff;
+  color: #e9f2ff;
+}
+
+.section {
+  padding: 50px;
+  margin: 0;
+  background-color: #e9f2ff;
   color: #0a121f;
 }
 
+.section:nth-child(odd) {
+  background-color: #0a121f;
+  color: #e9f2ff;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  /* Roboto Regular */
+  font-size: 16px;
+  /* Adjust the font size as needed */
+}
+
+.bio-wrapper,
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bio-text,
+.contact-text {
+  width: 50%;
+  /* Adjust the width as needed */
+  padding-right: 20px;
+  /* Add some spacing between text and image */
+}
+
+.bio-image,
+.contact-image {
+  width: 50%;
+  /* Adjust the width as needed */
+}
+
+.bio-image img,
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the "Get in Touch" button */
+.nav-button {
+  text-decoration: none;
+  background-color: #0a121f;
+  color: #e9f2ff;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-button:hover {
+  background-color: #006cff;
+  color: #e9f2ff;
+}
+
+#gallery h1,
+#organizations h1 {
+  text-align: center;
+}
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Organizations styles */
+.organizations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.organization-item {
+  flex: 0 0 calc(33.33% - 20px);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.organization-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
   color: #0a121f;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+
+#contact {
+  background: linear-gradient(to bottom, #0a121f 0%, #0a121f 90%, #000000 100%);
+  color: #e9f2ff;
+  padding: 50px;
+}
+
+.contact-image {
+  float: right;
+  width: 50%;
+}
+
+.contact-link {
+  color: #e9f2ff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #006cff;
+}
+
+footer {
+  background-color: #0a121f;
+  color: #e9f2ff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img {
+  width: 50px;
+  height: 50px;
 }
