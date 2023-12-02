@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,163 +24,153 @@
 </head>
 
 <body>
-  <header id="navigation">
+  <header>
     <div class="logo">
-      <img src="img/alacrisdevs_header_logo.png" alt="AlacrisDevs Logo">
+      <img src="img/alacrisdevs_header_logo.png" draggable="false" alt="AlacrisDevs Logo">
       <h1>AlacrisDevs</h1>
     </div>
     <nav>
-      <ul>
-        <li><a href="#bio">Who am I?</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#organizations">Organizations</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#bio">Who&nbsp;am&nbsp;I?</a>
+      <a href="#projects">Gallery</a>
+      <a href="#organizations">Organizations</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div id="bio" class="section">
+  <div id="bio" class="bio section">
     <div class="content">
-      <div class="bio-wrapper">
-        <div class="bio-text">
-          <h1>Who am I?</h1>
-          <p>
-            I am a 20-year-old graphic designer hailing from Estonia with a passion for crafting impactful logos and
-            brands for individuals and organizations alike.
-            <br />
-            Graphic design has been my creative outlet since 2019, and
-            over the years, I have had the privilege of serving numerous clients and helping them build their brand
-            identities.
-            <br />
-            Beyond design, I delve into the world of game development and programming in my free time.
-          </p>
-          <br />
-          <a href="#contact" class="nav-button">Get in Touch</a>
-        </div>
-        <div class="bio-image">
-          <img src="img\bio.jpg" alt="Alacrisdevs at Mängudeöö 2023">
-        </div>
+      <h2>Who am I?</h2>
+      <p>
+        I am a 20-year-old graphic designer hailing from Estonia with a passion for crafting impactful logos and
+        brands for individuals and organizations alike.
+      </p>
+      <p>
+        Graphic design has been my creative outlet since 2019, and
+        over the years, I have had the privilege of serving over 30 clients and helping them build their brand
+        identities.
+      </p>
+      <p>
+        Beyond design, I delve into the world of game development and programming in my free time.
+      </p>
+      <a href="#contact" class="contact-button">Get&nbsp;in&nbsp;Touch</a>
+    </div>
+    <div class="image">
+      <img src="img\bio.jpg" draggable="false" alt="Alacrisdevs at Mängudeöö 2023">
+    </div>
+  </div>
+
+  <div id="projects" class="projects section">
+    <h2>Projects and commissions</h2>
+    <div class="projects-grid">
+      <div class="item">
+        <img src="img/image1_induo.png" draggable="false" alt="inDuo Development logo">
+        <a href="https://induo.dev/" target="_blank" rel="noopener noreferrer">
+          <p>inDuo Development</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/image2_lillesalong.png" draggable="false" alt="Lillesalong Ema ja Tütar logo">
+        <p>Lillesalong Ema ja Tütar</p>
+      </div>
+      <div class="item">
+        <img src="img/image3_tigo.png" draggable="false" alt="Tigo - profile picture commission">
+        <p>Tigo - profile picture</p>
+      </div>
+      <div class="item">
+        <img src="img/image4_ingames.png" draggable="false" alt="inDuo Games logo">
+        <a href="https://induo.dev/"  target="_blank" rel="noopener noreferrer">
+          <p>inDuo Games</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/image5_aegcon.png" draggable="false" alt="Aegcon 2022 logo">
+        <a href="https://gamedevestonia.ee/news/estonian-gamedev-summer-conference/" class="link-white"
+          target="_blank" rel="noopener noreferrer">
+          <p>Aegcon 2022</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/image6_incode.png" draggable="false" alt="inDuo Code logo">
+        <a href="https://induo.dev/" target="_blank" rel="noopener noreferrer">
+          <p>inDuo Code</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/image7_katsky.png" draggable="false" alt="Katsky - profile picture commission">
+        <p>Katsky - profile picture</p>
+      </div>
+      <div class="item">
+        <img src="img/image8_enoki.png" draggable="false" alt="Enoki - profile picture commission">
+        <p>Enoki - profile picture</p>
+      </div>
+    </div>
+    <h2>...and the collection doesn't stop there!</h2>
+  </div>
+
+  <div id="organizations" class="organizations section">
+    <h2>Organizations and brands I've worked with</h2>
+    <div class="organizations-grid">
+      <div class="item">
+        <img src="img/org1_pycord.png" draggable="false" alt="Pycord logo">
+        <a href="https://pycord.dev" target="_blank" rel="noopener noreferrer">
+          <p>Pycord</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/org2_gamedevestonia.png" draggable="false" alt="Gamedev Estonia logo">
+        <a href="https://gamedevestonia.ee/" target="_blank" rel="noopener noreferrer">  
+          <p>Gamedev Estonia</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/org3_nurk.png" draggable="false" alt="ÕF Nurk Logo">
+        <a href="https://www.instagram.com/ofnurk/" target="_blank" rel="noopener noreferrer">
+          <p>ÕF Nurk</p>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/org4_mokamaare.png" draggable="false" alt="ÕF Mokamääre logo">
+        <a href="https://www.instagram.com/kiut.gloss/" target="_blank" rel="noopener noreferrer">
+          <p>ÕF Mokamääre</p>
+        </a>
       </div>
     </div>
   </div>
 
-  <div id="gallery" class="section">
+  <div id="contact" class="contact section">
     <div class="content">
-      <h1>Projects and commissions</h1>
-      <br />
-      <div class="flex-container">
-        <div class="flex-item">
-          <a href="https://induo.dev/" class="link-white" target="_blank"><img src="img/image1_induo.png"
-              alt="inDuo Development logo">
-            <p class="caption-white">inDuo Development</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <img src="img/image2_lillesalong.png" alt="Lillesalong Ema ja Tütar logo">
-          <p class="caption-white">Lillesalong Ema ja Tütar</p>
-        </div>
-        <div class="flex-item">
-          <img src="img/image3_tigo.png" alt="Tigo - profile picture commission">
-          <p class="caption-white">Tigo - profile picture</p>
-        </div>
-        <div class="flex-item">
-          <a href="https://induo.dev/" class="link-white" target="_blank"><img src="img/image4_ingames.png"
-              alt="inDuo Games logo">
-            <p class="caption-white">inDuo Games</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://gamedevestonia.ee/news/estonian-gamedev-summer-conference/" class="link-white"
-            target="_blank"><img src="img/image5_aegcon.png" alt="Aegcon 2022 logo">
-            <p class="caption-white">Aegcon 2022</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://induo.dev/" class="link-white" target="_blank"><img src="img/image6_incode.png"
-              alt="inDuo Code logo">
-            <p class="caption-white">inDuo Code</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <img src="img/image7_katsky.png" alt="Katsky - profile picture commission">
-          <p class="caption-white">Katsky - profile picture</p>
-        </div>
-        <div class="flex-item">
-          <img src="img/image8_enoki.png" alt="Enoki - profile picture commission">
-          <p class="caption-white">Enoki - profile picture</p>
-        </div>
-      </div>
-      <h1>...and the collection doesn't stop there!</h1>
+      <h2>Contact me</h2>
+      <p>
+        For&nbsp;business&nbsp;inquiries: <a href="mailto:alacrisdevs@gmail.com">alacrisdevs@gmail.com</a>
+      </p>
+      <p>
+        LinkedIn:&nbsp;<a href="https://www.linkedin.com/in/alacrisdevs/" target="_blank" rel="noopener noreferrer">@alacrisdevs</a>
+      </p>
+      <p>
+        Instagram:&nbsp;<a href="https://www.instagram.com/alacrisdevs/" target="_blank" rel="noopener noreferrer">@alacrisdevs</a>
+      </p>
+      <p>
+        itch.io&nbsp;Games&nbsp;Portfolio: <a href="https://alacrisdevs.itch.io" target="_blank" rel="noopener noreferrer">@alacrisdevs</a>
+      </p>
+      <p>
+        YouTube&nbsp;Channel: <a href="https://www.youtube.com/@alacrisdevs" target="_blank" rel="noopener noreferrer">@alacrisdevs</a>
+      </p>
     </div>
-  </div>
-
-  <div id="organizations" class="section">
-    <div class="content">
-      <h1>Organizations and brands I've worked with</h1>
-      <br />
-      <div class="flex-container">
-        <div class="flex-item">
-          <a href="https://pycord.dev" class="link-black" target="_blank"><img src="img/org1_pycord.png"
-              alt="Pycord logo">
-            <p class="caption-black">Pycord</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://gamedevestonia.ee/" class="link-black" target="_blank"><img src="img/org2_gamedevestonia.png"
-              alt="Gamedev Estonia logo">
-            <p class="caption-black">Gamedev Estonia</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://www.instagram.com/ofnurk/" class="link-black" target="_blank"><img src="img/org3_nurk.png"
-              alt="ÕF Nurk Logo">
-            <p class="caption-black">ÕF Nurk</p>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://www.instagram.com/kiut.gloss/" class="link-black" target="_blank"><img
-              src="img/org4_mokamaare.png" alt="ÕF Mokamääre logo">
-            <p class="caption-black">ÕF Mokamääre</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div id="contact" class="section">
-    <div class="content">
-      <div class="contact-wrapper">
-        <div class="contact-text">
-          <h1>Contact me</h1>
-          <p>
-            For business inquiries: <a href="mailto:alacrisdevs@gmail.com" class="link-white">alacrisdevs@gmail.com</a>
-          </p>
-          <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/alacrisdevs/" class="link-white" target="_blank">@alacrisdevs</a>
-          </p>
-          <p>
-            Instagram: <a href="https://www.instagram.com/alacrisdevs/" class="link-white" target="_blank">@alacrisdevs</a>
-          </p>
-          <p>
-            itch.io Games Portfolio: <a href="https://alacrisdevs.itch.io" class="link-white" target="_blank">@alacrisdevs</a>
-          </p>
-          <p>
-            YouTube Channel: <a href="https://www.youtube.com/@alacrisdevs" class="link-white" target="_blank">@alacrisdevs</a>
-          </p>
-        </div>
-        <div class="contact-image">
-          <img src="img/contact.jpg" alt="AlacrisDevs BTS filming video">
-        </div>
-      </div>
+    <div class="image">
+      <h2>Latest upload on YouTube</h2>
+      <iframe title="Latest AlacrisDevs YouTube channel upload" 
+      src="https://www.youtube.com/embed/listType=playlist?list=PL68j9a7tuaGdOCqUIRvrQMCOe9rARxoGV">
+      </iframe>
     </div>
   </div>
 
 </body>
 <footer>
-  <div class="footer-content">
-    <img src="img\alacrisdevs_header_logo.png" alt="AlacrisDevs Logo">
-    <p>AlacrisDevs 2023</p>
+  <div class="footer">
+    <div class="logo">
+      <img src="img\alacrisdevs_header_logo.png" draggable="false" alt="AlacrisDevs Logo">
+    </div>
+    <p>© AlacrisDevs 2023</p>
   </div>
 </footer>
 
