@@ -1,24 +1,20 @@
 html,
 body {
   margin: 0;
-  background-color: #0a121f;
-  color: #e9f2ff;
   scroll-behavior: smooth;
 }
 
 h1, h2 {
+  color: #e9f2ff;
   font-family: "Raleway", sans-serif;
+}
+
+p {
+  color: #e9f2ff;
 }
 
 p, a {
   font-family: "Roboto", sans-serif;
-}
-
-.bio h2, 
-.bio p, 
-.organizations h2, 
-.organizations p {
-  color: #0a121f;
 }
 
 header, 
@@ -57,7 +53,6 @@ nav a,
 .contact-button {
   cursor: pointer;
   text-decoration: none;
-  background-color: #0a121f;
   color: #e9f2ff;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -67,7 +62,12 @@ nav a,
   transition: background-color 0.3s ease;
 }
 
+nav a {
+  background-color: #0a121f;
+}
+
 .contact-button {
+  background-color: #006cff;
   margin-top: 20px;
 }
 
@@ -121,8 +121,8 @@ iframe {
 
 .bio, 
 .organizations {
-  background-color: #e9f2ff;
-  color: #0a121f;
+  background-color: #000814;
+  color: #e9f2ff;
 }
 
 .projects, 
@@ -135,15 +135,17 @@ iframe {
   padding-bottom: 50px;
 }
 
-.projects a, 
-.contact a {
-  cursor: pointer;
-  color: #e9f2ff;
+.projects {
+  background-color: #0a121f;
 }
 
+.projects p, 
+.projects a, 
+.contact a, 
+.organizations p, 
 .organizations a {
   cursor: pointer;
-  color: #0a121f;
+  color: #e9f2ff;
 }
 
 .projects a:hover, 
@@ -168,7 +170,7 @@ iframe {
 }
 
 .contact {
-  background: linear-gradient(to bottom, #0a121f 0%, #0a121f 90%, #000000 100%);
+  background: linear-gradient(to bottom, #0a121f 0%, #0a121f 95%, #000814 100%);
 }
 
 .footer {
@@ -234,5 +236,39 @@ iframe {
   .projects-grid, 
   .organizations-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  h2, p, 
+  .projects p, 
+  .organizations p {
+    color: #000814;
+  }
+  .bio, 
+  .organizations {
+    background-color: #e9f2ff;
+    color: #000814;
+  }
+  .projects {
+    background-color: #e0e8f5;
+  }
+  .projects a, 
+  .contact a, 
+  .organizations a {
+    cursor: pointer;
+    color: #000814;
+  }
+  .contact-button {
+    background-color: #0a121f;
+  }
+  .contact {
+    background: linear-gradient(to bottom, #e0e8f5 0%, #e0e8f5 95%, #000814 100%);
+  }
+  .footer p {
+    color: #e9f2ff;
+  }
+  .item > img {
+    filter: invert(1) hue-rotate(180deg);
   }
 }
