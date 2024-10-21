@@ -1,5 +1,5 @@
 # portfolio-site
-I am a 20-year-old graphic designer hailing from Estonia with a passion for crafting impactful logos and brands for individuals and organizations alike.
+I am a 21-year-old graphic designer hailing from Estonia with a passion for crafting impactful logos and brands for individuals and organizations alike.
 Graphic design has been my creative outlet since 2019, and over the years, I have had the privilege of serving numerous clients and helping them build their brand identities.
 Beyond design, I delve into the world of game development and programming in my free time.
 
