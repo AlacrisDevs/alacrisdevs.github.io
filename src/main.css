@@ -2,13 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html, body {
+html,
+body {
   margin: 0;
   font-size: 16px;
 }
 
-h1, h2, p, a{
-    color: white;
+h1,
+h2,
+p,
+a {
+  color: white;
 }
 
 h1 {
@@ -25,16 +29,35 @@ h2 {
   line-height: 1.25
 }
 
-p, a {
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+p,
+a {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25
 }
 
-.button-text {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 1.125rem;
-  line-height: 1.25
+a {
+  text-decoration: underline;
+  text-decoration-color: inherit;
+  transition: text-decoration-color 0.3s ease;
+}
+
+a:hover {
+  text-decoration-color: #006cff;
+}
+
+img,
+.protected-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

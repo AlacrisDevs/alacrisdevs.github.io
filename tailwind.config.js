@@ -28,12 +28,15 @@ export default {
         'lg': "1.25rem",
         'xl': "1.5rem",
         '2xl': "2rem"
-       },
-       backgroundImage: {
+      },
+      backgroundImage: {
         'hero-background': "url('src/assets/images/hero_bg.png')"
-       }
+      },
+      filter: ['hover', 'group-hover'],
+      transitionProperty: {
+        hue: 'filter',
+      },
     },
   },
   plugins: [],
 }
-

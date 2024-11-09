@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import Button from './Button.vue';
-import Hamburger from './Hamburger.vue';
+import Button from './buttons/Button.vue';
+import ActiveButton from './buttons/ActiveButton.vue';
+import Hamburger from './buttons/Hamburger.vue';
 
 function scrollToId(id: string): void {
     const element = document.getElementById(id);
@@ -37,7 +38,7 @@ function scrollToId(id: string): void {
             <Button class="hidden xl:block" button-text="About" @click="scrollToId('who-am-i')" />
             <Button class="hidden xl:block" button-text="Projects" @click="scrollToId('projects')" />
             <Button class="hidden xl:block" button-text="Gallery" @click="scrollToId('gallery')" />
-            <Button class="hidden xl:block" button-text="Contact" @click="scrollToId('contact')" />
+            <ActiveButton class="hidden xl:block" button-text="Contact" @click="scrollToId('contact')" />
             <Hamburger class="block xl:hidden" />
         </div>
     </div>
