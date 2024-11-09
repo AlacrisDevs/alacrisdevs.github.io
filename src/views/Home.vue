@@ -1,4 +1,5 @@
 <script setup>
+import GalleryCard from '@/components/cards/GalleryCard.vue';
 import ImageCard from '@/components/cards/ImageCard.vue';
 import LinkCard from '@/components/cards/LinkCard.vue';
 </script>
@@ -27,7 +28,7 @@ import LinkCard from '@/components/cards/LinkCard.vue';
     </div>
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
-    <h2 class="text-center">Graphic design commissions</h2>
+    <h2 class="text-center">Selection of graphic design commissions</h2>
     <div class="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
       <ImageCard card-name="Tigo" card-description="Profile picture"
         image-src="src/assets/images/commissions/commission_tigo.png" />
@@ -35,8 +36,15 @@ import LinkCard from '@/components/cards/LinkCard.vue';
         image-src="src/assets/images/commissions/commission_katsky.png" />
       <ImageCard card-name="Enoki" card-description="Profile picture"
         image-src="src/assets/images/commissions/commission_enoki.png" />
-      <ImageCard card-name="Aegcon 2022"
-        card-description="GameDev Estonia Summer Conference logo"
+      <ImageCard card-name="BobDotCom" card-description="Profile picture"
+        image-src="src/assets/images/commissions/commission_bobdotcom.png" />
+      <ImageCard card-name="Yikizi" card-description="Profile picture"
+        image-src="src/assets/images/commissions/commission_yikizi.png" />
+      <ImageCard card-name="Apex" card-description="Discord bot picture"
+        image-src="src/assets/images/commissions/commission_apex.png" />
+      <ImageCard card-name="inDuo" card-description="Discord server picture"
+        image-src="src/assets/images/commissions/commission_induo.png" />
+      <ImageCard card-name="Aegcon 2022" card-description="GameDev Estonia Summer Conference logo"
         image-src="src/assets/images/commissions/commission_aegcon.png" />
     </div>
   </div>
@@ -49,7 +57,7 @@ import LinkCard from '@/components/cards/LinkCard.vue';
       <LinkCard card-url="https://alacrisdevs.itch.io/lux-mundi" card-name="Lux Mundi"
         card-description="A visually soothing time-killer sandbox made in 4 days."
         image-src="src/assets/images/games/game_lux_mundi.svg" />
-      <LinkCard card-url="https://alacrisdevs.itch.io/dichotomia" card-name="Dichotomia [GGJ Latvia 2022]"
+      <LinkCard card-url="https://alacrisdevs.itch.io/dichotomia" card-name="Dichotomia"
         card-description="Fight your inner demon, Jekyll. Fight it."
         image-src="src/assets/images/games/game_dichotomia.svg" />
       <LinkCard card-url="https://induo.dev/" card-name="At World’s End"
@@ -70,7 +78,7 @@ import LinkCard from '@/components/cards/LinkCard.vue';
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-black flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Organizations and brands I've worked with</h2>
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 place-items-center">
+    <div class="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
       <LinkCard card-url="https://taltech.ee/en/school-of-information-technologies" card-name="TalTech School of IT"
         card-description="Commissioned designs like promotional material and stickers."
         image-src="src/assets/images/orgs/org_taltech_it.png" />
@@ -78,9 +86,43 @@ import LinkCard from '@/components/cards/LinkCard.vue';
         card-description="Designing event logos and organizing events."
         image-src="src/assets/images/orgs/org_gamedev_estonia.png" />
       <LinkCard card-url="https://emajatutarlilled.ee/" card-name="Lillegalerii Ema ja Tütar"
-        card-description="Created and designed the brand."
+        card-description="Created and designed the brand." 
         image-src="src/assets/images/orgs/org_lillesalong.png" />
+      <LinkCard card-url="https://pycord.dev/" card-name="Pycord"
+        card-description="Created and designed the brand."
+        image-src="src/assets/images/orgs/org_pycord.png" />
+      <LinkCard card-url="https://www.instagram.com/ofnurk/" card-name="ÕF Nurk"
+        card-description="Created and designed the brand." 
+        image-src="src/assets/images/orgs/org_nurk.png" />
+      <LinkCard card-url="https://www.instagram.com/kiut.gloss/" card-name="ÕF Mokamääre"
+        card-description="Created and designed the brand."
+        image-src="src/assets/images/orgs/org_mokamaare.png" />
     </div>
     <h2 class="text-center">...and the list doesn't stop there!</h2>
+  </div>
+  <div id="gallery" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
+    <h2 class="text-center">Memories</h2>
+    <div class="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
+      <GalleryCard image-src="src/assets/images/memories/first_yt.jpg" card-name="First YouTube video" />
+      <GalleryCard image-src="src/assets/images/memories/team_greenjam.png" card-name="First Game Jam" />
+      <GalleryCard image-src="src/assets/images/memories/first_song.png" card-name="First Song" />
+      <GalleryCard image-src="src/assets/images/memories/summerconf22_1.jpg" card-name="GameDev Summer Conference Day 1" />
+      <GalleryCard image-src="src/assets/images/memories/summerconf22_2.jpg" card-name="GameDev Summer Conference Day 1" />
+      <GalleryCard image-src="src/assets/images/memories/mobidictum23.jpg" card-name="Mobidictum Tallinn 2023" />
+      <GalleryCard image-src="src/assets/images/memories/indieshowcase23.jpg" card-name="Indie Showcase 2023" />
+      <GalleryCard image-src="src/assets/images/memories/mangudeoo23.jpg" card-name="MängudeÖÖ 2023" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamp24_1.jpg" card-name="TalTech GameCamp 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamp24_2.jpg" card-name="TalTech GameCamp 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamp24_3.jpg" card-name="TalTech GameCamp 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamedevguild24_1.jpg" card-name="Gamedev Guild 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamedevguild24_2.jpg" card-name="Gamedev Guild 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamedevguild24_3.jpg" card-name="Gamedev Guild 2024" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamplite_1.jpg" card-name="TalTech GameCamp Lite" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamplite_2.jpg" card-name="TalTech GameCamp Lite" />
+      <GalleryCard image-src="src/assets/images/memories/gamecamplite_3.jpg" card-name="TalTech GameCamp Lite" />
+      <GalleryCard image-src="src/assets/images/memories/mangudeoo24_1.jpg" card-name="MängudeÖÖ 2024" />
+      <GalleryCard image-src="src/assets/images/memories/mangudeoo24_2.jpg" card-name="MängudeÖÖ 2024" />
+      <GalleryCard image-src="src/assets/images/memories/mangudeoo24_3.jpg" card-name="MängudeÖÖ 2024" />
+    </div>
   </div>
 </template>
