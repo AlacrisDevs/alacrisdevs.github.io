@@ -29,10 +29,6 @@ export default {
         'xl': "1.5rem",
         '2xl': "2rem"
       },
-      backgroundImage: {
-        'hero-background': "url('src/assets/images/hero_bg.png')",
-        'footer-background': "url('src/assets/images/footer_bg.png')"
-      },
     },
   },
   plugins: [],

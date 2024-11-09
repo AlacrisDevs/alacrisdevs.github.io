@@ -10,7 +10,7 @@ import YouTube from '@/components/icons/YouTube.vue';
 
 <template>
   <div id="who-am-i"
-    class="w-full px-8 xl:px-32 bg-hero-background bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
+    class="w-full px-8 xl:px-32 bg-[url('src/assets/images/hero_bg.png')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
     <div class="w-full xl:w-1/2 py-8 xl:px-16 flex-col justify-center items-start gap-8 flex">
       <h2>Who am I?</h2>
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
@@ -140,7 +140,7 @@ import YouTube from '@/components/icons/YouTube.vue';
     </div>
   </div>
   <div id="contact"
-    class="w-full px-8 xl:px-32 py-16 bg-footer-background bg-cover bg-center flex-col justify-between gap-4 items-center flex">
+    class="w-full px-8 xl:px-32 py-16 bg-[url('src/assets/images/footer_bg.png')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
     <h2>Get in touch</h2>
     <p class="flex-row gap-2 items-center flex">
       <Gmail /><a href="mailto:alacris@induo.dev">alacris@induo.dev</a>
