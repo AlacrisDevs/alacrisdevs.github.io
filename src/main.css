@@ -32,7 +32,7 @@ h2 {
 h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.25;
 }
 
@@ -55,11 +55,26 @@ a:hover {
   text-decoration-color: #006cff;
 }
 
-
 img,
 .protected-content {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p, 
+  a {
+    font-size: 0.75rem;
+  }
 }

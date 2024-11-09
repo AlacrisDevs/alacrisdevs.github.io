@@ -16,13 +16,13 @@ import YouTube from '@/components/icons/YouTube.vue';
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
         design, event planning and management, and game development.<br /><br />
 
-        With a background in graphic design since <b>2019</b>, I’ve collaborated with over 30 clients, helping them
-        shape distinctive brand identities. Alongside design, I’m deeply involved in game development, including my work
+        With a background in graphic design since <b>2019</b>, I've collaborated with over 30 clients, helping them
+        shape distinctive brand identities. Alongside design, I'm deeply involved in game development, including my work
         on <b>Packet Tracers</b>, a multiplayer game I built during my studies.<br /><br />
 
-        I’m the main organizer of <b>TalTech GameCamp</b> and <b>Gamedev Guild</b>, where I bring together developers
+        I'm the main organizer of <b>TalTech GameCamp</b> and <b>Gamedev Guild</b>, where I bring together developers
         and enthusiasts to share knowledge, network, and create! These events, hosted in collaboration with Estonian
-        game developers and <b>TalTech Tallinn University of Technology</b>, have grown into key platforms for Estonia’s
+        game developers and <b>TalTech Tallinn University of Technology</b>, have grown into key platforms for Estonia's
         game development community.
       </p>
     </div>
@@ -33,7 +33,7 @@ import YouTube from '@/components/icons/YouTube.vue';
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Selection of graphic design commissions</h2>
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
+    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <ImageCard card-name="Tigo" card-description="Profile picture"
         image-src="src/assets/images/commissions/commission_tigo.png" />
       <ImageCard card-name="Katsky" card-description="Profile picture"
@@ -55,7 +55,7 @@ import YouTube from '@/components/icons/YouTube.vue';
   <div id="projects"
     class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">My games and ongoing projects</h2>
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
+    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <LinkCard card-url="https://alacrisdevs.itch.io/packet-tracers" card-name="Packet Tracers"
         card-description="Defend your network from the impending viral invasion!"
         image-src="src/assets/images/games/game_packet_tracers.svg" />
@@ -65,14 +65,14 @@ import YouTube from '@/components/icons/YouTube.vue';
       <LinkCard card-url="https://alacrisdevs.itch.io/dichotomia" card-name="Dichotomia"
         card-description="Fight your inner demon, Jekyll. Fight it."
         image-src="src/assets/images/games/game_dichotomia.svg" />
-      <LinkCard card-url="https://induo.dev/" card-name="At World’s End"
+      <LinkCard card-url="https://induo.dev/" card-name="At World's End"
         card-description="A race against time, where time itself is your greatest ally and enemy."
         image-src="src/assets/images/games/game_awe.svg" />
     </div>
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Events I'm organizing</h2>
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 place-items-center">
+    <div class="grid grid-cols-2 gap-4 place-items-center">
       <LinkCard card-url="https://gamecamp.ituk.ee/" card-name="TalTech GameCamp"
         card-description="A combination of a game development bootcamp and a game jam."
         image-src="src/assets/images/events/event_gamecamp.png" />
@@ -83,7 +83,7 @@ import YouTube from '@/components/icons/YouTube.vue';
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Organizations and brands I've worked with</h2>
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
+    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <LinkCard card-url="https://taltech.ee/en/school-of-information-technologies" card-name="TalTech School of IT"
         card-description="Commissioned designs like promotional material and stickers."
         image-src="src/assets/images/orgs/org_taltech_it.png" />
@@ -104,17 +104,14 @@ import YouTube from '@/components/icons/YouTube.vue';
   </div>
   <div id="gallery" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
-    <div class="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 place-items-center">
+    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <GalleryCard image-src="src/assets/images/memories/first_yt.jpg" card-name="First YouTube video" />
       <GalleryCard image-src="src/assets/images/memories/team_greenjam.png" card-name="First Game Jam" />
       <GalleryCard image-src="src/assets/images/memories/first_song.png" card-name="First song" />
       <GalleryCard image-src="src/assets/images/memories/first_cover.jpg" card-name="First cover" />
-      <GalleryCard image-src="src/assets/images/memories/firstmeetup_1.jpg"
-        card-name="One of the first meetups I went to" />
-      <GalleryCard image-src="src/assets/images/memories/firstmeetup_2.jpg"
-        card-name="One of the first meetups I went to" />
-      <GalleryCard image-src="src/assets/images/memories/firstmeetup_3.jpg"
-        card-name="One of the first meetups I went to" />
+      <GalleryCard image-src="src/assets/images/memories/firstmeetup_1.jpg" card-name="Early GameDev meetup" />
+      <GalleryCard image-src="src/assets/images/memories/firstmeetup_2.jpg" card-name="Early GameDev meetup" />
+      <GalleryCard image-src="src/assets/images/memories/firstmeetup_3.jpg" card-name="Early GameDev meetup" />
       <GalleryCard image-src="src/assets/images/memories/summerconf22_1.jpg" card-name="GameDev Summer Conference" />
       <GalleryCard image-src="src/assets/images/memories/summerconf22_2.jpg" card-name="GameDev Summer Conference" />
       <GalleryCard image-src="src/assets/images/memories/christmas_1.jpg" card-name="Christmas GameDev Meetup" />
@@ -144,10 +141,18 @@ import YouTube from '@/components/icons/YouTube.vue';
   </div>
   <div id="contact"
     class="w-full px-8 xl:px-32 py-16 bg-footer-background bg-cover bg-center flex-col justify-between gap-4 items-center flex">
-      <h2>Get in touch</h2>
-      <p class="flex-row gap-2 items-center flex"><Gmail /><a href="mailto:alacris@induo.dev">alacris@induo.dev</a></p>
-      <p class="flex-row gap-2 items-center flex"><LinkedIn /><a href="https://www.linkedin.com/in/alacrisdevs/" rel="noopener noreferrer">@alacrisdevs</a></p>
-      <p class="flex-row gap-2 items-center flex"><Discord /><a href="https://discord.com/invite/8JcX2NFJnq" rel="noopener noreferrer">@alacrisdevs</a></p>
-      <p class="flex-row gap-2 items-center flex"><YouTube /><a href="https://www.youtube.com/@alacrisdevs" rel="noopener noreferrer">@alacrisdevs</a></p>
+    <h2>Get in touch</h2>
+    <p class="flex-row gap-2 items-center flex">
+      <Gmail /><a href="mailto:alacris@induo.dev">alacris@induo.dev</a>
+    </p>
+    <p class="flex-row gap-2 items-center flex">
+      <LinkedIn /><a href="https://www.linkedin.com/in/alacrisdevs/" rel="noopener noreferrer">@alacrisdevs</a>
+    </p>
+    <p class="flex-row gap-2 items-center flex">
+      <Discord /><a href="https://discord.com/invite/8JcX2NFJnq" rel="noopener noreferrer">@alacrisdevs</a>
+    </p>
+    <p class="flex-row gap-2 items-center flex">
+      <YouTube /><a href="https://www.youtube.com/@alacrisdevs" rel="noopener noreferrer">@alacrisdevs</a>
+    </p>
   </div>
 </template>
