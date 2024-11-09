@@ -12,7 +12,7 @@ h1,
 h2,
 p,
 a {
-  color: white;
+  color: #e9f2ff;
 }
 
 h1 {
@@ -25,7 +25,7 @@ h1 {
 h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.25
 }
 
@@ -46,13 +46,15 @@ a {
 
 a {
   text-decoration: underline;
-  text-decoration-color: inherit;
-  transition: text-decoration-color 0.3s ease;
+  text-decoration-color: #e9f2ff;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 a:hover {
+  color: #006cff;
   text-decoration-color: #006cff;
 }
+
 
 img,
 .protected-content {

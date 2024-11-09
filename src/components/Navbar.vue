@@ -20,7 +20,7 @@ function scrollToId(id: string): void {
 </script>
 
 <template>
-    <div class="w-full px-8 xl:px-32 py-4 bg-dark shadow justify-between items-center flex">
+    <div class="w-full px-8 xl:px-48 py-4 bg-dark shadow justify-between items-center flex">
         <div class="justify-center items-center gap-4 flex">
             <div class="w-[32px] h-[32px]">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

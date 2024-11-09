@@ -30,11 +30,8 @@ export default {
         '2xl': "2rem"
       },
       backgroundImage: {
-        'hero-background': "url('src/assets/images/hero_bg.png')"
-      },
-      filter: ['hover', 'group-hover'],
-      transitionProperty: {
-        hue: 'filter',
+        'hero-background': "url('src/assets/images/hero_bg.png')",
+        'footer-background': "url('src/assets/images/footer_bg.png')"
       },
     },
   },
