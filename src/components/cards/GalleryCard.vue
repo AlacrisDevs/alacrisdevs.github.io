@@ -52,7 +52,7 @@ const showPreviousImage = () => {
     <div v-if="isOverlayOpen"
         class="fixed inset-0 px-8 xl:px-32 py-16 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-200 ease-in-out"
         :class="[isOverlayOpen ? 'opacity-100 transition-opacity duration-200 ease-in-out' : 'opacity-0 transition-opacity duration-200 ease-in-out']">
-        <img class="w-auto h-1/4 xl:h-3/4 lg:h-1/2 md:h-2/5 sm:1/4 aspect-auto relative"
+        <img class="w-auto h-1/3 xl:h-3/4 lg:h-1/2 md:h-2/5 sm:h-1/3 aspect-auto relative"
             :src="imageList[currentImageIndex].src" :alt="imageList[currentImageIndex].name" />
 
         <h3 class="text-light">{{ imageList[currentImageIndex].name }}</h3>
