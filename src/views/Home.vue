@@ -1,4 +1,6 @@
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue';
+import { imageList as initialImages } from '../components/GalleryData.js';
 import GalleryCard from '@/components/cards/GalleryCard.vue';
 import ImageCard from '@/components/cards/ImageCard.vue';
 import LinkCard from '@/components/cards/LinkCard.vue';
@@ -6,6 +8,8 @@ import Discord from '@/components/icons/Discord.vue';
 import Gmail from '@/components/icons/Gmail.vue';
 import LinkedIn from '@/components/icons/LinkedIn.vue';
 import YouTube from '@/components/icons/YouTube.vue';
+
+const imageList = ref([...initialImages]);
 </script>
 
 <template>
@@ -16,14 +20,15 @@ import YouTube from '@/components/icons/YouTube.vue';
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
         design, event planning and management, and game development.<br /><br />
 
-        With a background in graphic design since <b>2019</b>, I've collaborated with over 30 clients, helping them
-        shape distinctive brand identities. Alongside design, I'm deeply involved in game development, including my work
-        on <b>Packet Tracers</b>, a multiplayer game I built during my studies.<br /><br />
+        With a background in graphic design since 2019, I've collaborated with over <b>30 clients</b>, helping them
+        shape distinctive brand identities.<br />
+        Alongside design, I'm deeply involved in game development, including my work on <b>Packet Tracers</b>, a
+        multiplayer game I built during my studies.<br /><br />
 
         I'm the main organizer of <b>TalTech GameCamp</b> and <b>Gamedev Guild</b>, where I bring together developers
-        and enthusiasts to share knowledge, network, and create! These events, hosted in collaboration with Estonian
-        game developers and <b>TalTech Tallinn University of Technology</b>, have grown into key platforms for Estonia's
-        game development community.
+        and enthusiasts to share knowledge, network, and create!<br />
+        These events, hosted in collaboration with Estonian game developers and <b>TalTech Tallinn University of
+          Technology</b>, have grown into key platforms for Estonia's game development community.
       </p>
     </div>
     <div
@@ -63,8 +68,7 @@ import YouTube from '@/components/icons/YouTube.vue';
         card-description="A visually soothing time-killer sandbox made in 4 days."
         image-src="/images/games/game_lux_mundi.svg" />
       <LinkCard card-url="https://alacrisdevs.itch.io/dichotomia" card-name="Dichotomia"
-        card-description="Fight your inner demon, Jekyll. Fight it."
-        image-src="/images/games/game_dichotomia.svg" />
+        card-description="Fight your inner demon, Jekyll. Fight it." image-src="/images/games/game_dichotomia.svg" />
       <LinkCard card-url="https://induo.dev/" card-name="At World's End"
         card-description="A race against time, where time itself is your greatest ally and enemy."
         image-src="/images/games/game_awe.svg" />
@@ -105,38 +109,9 @@ import YouTube from '@/components/icons/YouTube.vue';
   <div id="gallery" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <GalleryCard image-src="/images/memories/first_yt.jpg" card-name="First YouTube video" />
-      <GalleryCard image-src="/images/memories/team_greenjam.png" card-name="First Game Jam" />
-      <GalleryCard image-src="/images/memories/first_song.png" card-name="First song" />
-      <GalleryCard image-src="/images/memories/first_cover.jpg" card-name="First cover" />
-      <GalleryCard image-src="/images/memories/firstmeetup_1.jpg" card-name="Early GameDev meetup" />
-      <GalleryCard image-src="/images/memories/firstmeetup_2.jpg" card-name="Early GameDev meetup" />
-      <GalleryCard image-src="/images/memories/firstmeetup_3.jpg" card-name="Early GameDev meetup" />
-      <GalleryCard image-src="/images/memories/summerconf22_1.jpg" card-name="GameDev Summer Conference" />
-      <GalleryCard image-src="/images/memories/summerconf22_2.jpg" card-name="GameDev Summer Conference" />
-      <GalleryCard image-src="/images/memories/christmas_1.jpg" card-name="Christmas GameDev Meetup" />
-      <GalleryCard image-src="/images/memories/christmas_2.jpg" card-name="Christmas GameDev Meetup" />
-      <GalleryCard image-src="/images/memories/christmas_3.jpg" card-name="Christmas GameDev Meetup" />
-      <GalleryCard image-src="/images/memories/mobidictum23.jpg" card-name="Mobidictum Tallinn 2023" />
-      <GalleryCard image-src="/images/memories/mangudeoo23.jpg" card-name="MängudeÖÖ 2023" />
-      <GalleryCard image-src="/images/memories/indieshowcase23.jpg" card-name="Indie Showcase 2023" />
-      <GalleryCard image-src="/images/memories/AlacrisDevs.jpg" card-name="AlacrisDevs photoshoot" />
-      <GalleryCard image-src="/images/memories/photoshoot1.JPG" card-name="AlacrisDevs photoshoot" />
-      <GalleryCard image-src="/images/memories/photoshoot2.JPG" card-name="AlacrisDevs photoshoot" />
-      <GalleryCard image-src="/images/memories/gamecamp24_1.jpg" card-name="TalTech GameCamp 2024" />
-      <GalleryCard image-src="/images/memories/gamecamp24_2.jpg" card-name="TalTech GameCamp 2024" />
-      <GalleryCard image-src="/images/memories/gamecamp24_3.jpg" card-name="TalTech GameCamp 2024" />
-      <GalleryCard image-src="/images/memories/gamedevguild24_1.jpg" card-name="Gamedev Guild 2024" />
-      <GalleryCard image-src="/images/memories/gamedevguild24_2.jpg" card-name="Gamedev Guild 2024" />
-      <GalleryCard image-src="/images/memories/gamedevguild24_3.jpg" card-name="Gamedev Guild 2024" />
-      <GalleryCard image-src="/images/memories/gamedevguild24_4.jpg" card-name="Gamedev Guild 2024" />
-      <GalleryCard image-src="/images/memories/gamedevguild24_5.jpg" card-name="Gamedev Guild 2024" />
-      <GalleryCard image-src="/images/memories/gamecamplite_1.jpg" card-name="TalTech GameCamp Lite" />
-      <GalleryCard image-src="/images/memories/gamecamplite_2.jpg" card-name="TalTech GameCamp Lite" />
-      <GalleryCard image-src="/images/memories/gamecamplite_3.jpg" card-name="TalTech GameCamp Lite" />
-      <GalleryCard image-src="/images/memories/mangudeoo24_1.JPG" card-name="MängudeÖÖ 2024" />
-      <GalleryCard image-src="/images/memories/mangudeoo24_2.JPG" card-name="MängudeÖÖ 2024" />
-      <GalleryCard image-src="/images/memories/mangudeoo24_3.JPG" card-name="MängudeÖÖ 2024" />
+      <GalleryCard v-for="(image, index) in imageList" :key="index" :index="index" :image-src="image.src"
+        :card-name="image.name" />
+
     </div>
   </div>
   <div id="contact"
