@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { brandList } from '../lists/BrandsData.js';
+import { eventList } from '../lists/EventsData.js';
+import { gameList } from '../lists/GamesData.js';
 const props = defineProps<{
     cardUrl: string,
     imageSrc: string,

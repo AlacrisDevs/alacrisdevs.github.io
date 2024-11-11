@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { imageList as initialImages } from '../components/GalleryData.js';
+import { brandList } from '@/components/lists/BrandsData';
+import { designList } from '@/components/lists/DesignsData';
+import { eventList } from '@/components/lists/EventsData';
+import { gameList } from '@/components/lists/GamesData.js';
+import { galleryList as initialMemories } from '@/components/lists/GalleryData.js';
 import GalleryCard from '@/components/cards/GalleryCard.vue';
 import ImageCard from '@/components/cards/ImageCard.vue';
 import LinkCard from '@/components/cards/LinkCard.vue';
@@ -9,7 +13,7 @@ import Gmail from '@/components/icons/Gmail.vue';
 import LinkedIn from '@/components/icons/LinkedIn.vue';
 import YouTube from '@/components/icons/YouTube.vue';
 
-const imageList = ref([...initialImages]);
+const galleryList = ref([...initialMemories]);
 </script>
 
 <template>
@@ -36,72 +40,32 @@ const imageList = ref([...initialImages]);
       <img class="w-3/4" src="../../public/images/hero.png" />
     </div>
   </div>
+  <div id="projects" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
+    <h2 class="text-center">My games and ongoing projects</h2>
+    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
+      <LinkCard v-for="(card, index) in gameList" :key="index" :card-url="card.url" :image-src="card.src"
+        :card-name="card.name" :card-description="card.description" />
+    </div>
+  </div>
+  <div class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
+    <h2 class="text-center">Events I'm organizing</h2>
+    <div class="grid grid-cols-2 gap-4 place-items-center">
+      <LinkCard v-for="(card, index) in eventList" :key="index" :card-url="card.url" :image-src="card.src"
+        :card-name="card.name" :card-description="card.description" />
+    </div>
+  </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Selection of graphic design commissions</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <ImageCard card-name="Tigo" card-description="Profile picture"
-        image-src="/images/commissions/commission_tigo.png" />
-      <ImageCard card-name="Katsky" card-description="Profile picture"
-        image-src="/images/commissions/commission_katsky.png" />
-      <ImageCard card-name="Enoki" card-description="Profile picture"
-        image-src="/images/commissions/commission_enoki.png" />
-      <ImageCard card-name="BobDotCom" card-description="Profile picture"
-        image-src="/images/commissions/commission_bobdotcom.png" />
-      <ImageCard card-name="Yikizi" card-description="Profile picture"
-        image-src="/images/commissions/commission_yikizi.png" />
-      <ImageCard card-name="Apex" card-description="Discord bot picture"
-        image-src="/images/commissions/commission_apex.png" />
-      <ImageCard card-name="inDuo" card-description="Discord server picture"
-        image-src="/images/commissions/commission_induo.png" />
-      <ImageCard card-name="Aegcon 2022" card-description="GameDev Estonia Summer Conference logo"
-        image-src="/images/commissions/commission_aegcon.png" />
-    </div>
-  </div>
-  <div id="projects"
-    class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
-    <h2 class="text-center">My games and ongoing projects</h2>
-    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <LinkCard card-url="https://alacrisdevs.itch.io/packet-tracers" card-name="Packet Tracers"
-        card-description="Defend your network from the impending viral invasion!"
-        image-src="/images/games/game_packet_tracers.svg" />
-      <LinkCard card-url="https://alacrisdevs.itch.io/lux-mundi" card-name="Lux Mundi"
-        card-description="A visually soothing time-killer sandbox made in 4 days."
-        image-src="/images/games/game_lux_mundi.svg" />
-      <LinkCard card-url="https://alacrisdevs.itch.io/dichotomia" card-name="Dichotomia"
-        card-description="Fight your inner demon, Jekyll. Fight it." image-src="/images/games/game_dichotomia.svg" />
-      <LinkCard card-url="https://induo.dev/" card-name="At World's End"
-        card-description="A race against time, where time itself is your greatest ally and enemy."
-        image-src="/images/games/game_awe.svg" />
-    </div>
-  </div>
-  <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
-    <h2 class="text-center">Events I'm organizing</h2>
-    <div class="grid grid-cols-2 gap-4 place-items-center">
-      <LinkCard card-url="https://gamecamp.ituk.ee/" card-name="TalTech GameCamp"
-        card-description="A combination of a game development bootcamp and a game jam."
-        image-src="/images/events/event_gamecamp.png" />
-      <ImageCard card-name="Gamedev Guild"
-        card-description="A casual meetup for Estonian gamedevs to showcase projects in an informal setting."
-        image-src="/images/events/event_gamedev_guild.png" />
+      <ImageCard v-for="(card, index) in designList" :key="index" :image-src="card.src" :card-name="card.name"
+        :card-description="card.description" />
     </div>
   </div>
   <div class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Organizations and brands I've worked with</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <LinkCard card-url="https://taltech.ee/en/school-of-information-technologies" card-name="TalTech School of IT"
-        card-description="Commissioned designs like promotional material and stickers."
-        image-src="/images/orgs/org_taltech_it.png" />
-      <LinkCard card-url="https://gamedevestonia.ee/" card-name="GameDev Estonia"
-        card-description="Designing event logos and organizing events."
-        image-src="/images/orgs/org_gamedev_estonia.png" />
-      <LinkCard card-url="https://emajatutarlilled.ee/" card-name="Lillegalerii Ema ja Tütar"
-        card-description="Created and designed the brand." image-src="/images/orgs/org_lillesalong.png" />
-      <LinkCard card-url="https://pycord.dev/" card-name="Pycord" card-description="Created and designed the brand."
-        image-src="/images/orgs/org_pycord.png" />
-      <LinkCard card-url="https://www.instagram.com/ofnurk/" card-name="ÕF Nurk"
-        card-description="Created and designed the brand." image-src="/images/orgs/org_nurk.png" />
-      <LinkCard card-url="https://www.instagram.com/kiut.gloss/" card-name="ÕF Mokamääre"
-        card-description="Created and designed the brand." image-src="/images/orgs/org_mokamaare.png" />
+      <LinkCard v-for="(card, index) in brandList" :key="index" :card-url="card.url" :image-src="card.src"
+        :card-name="card.name" :card-description="card.description" />
     </div>
     <br />
     <h2 class="text-center">...and the list doesn't stop there!</h2>
@@ -109,9 +73,8 @@ const imageList = ref([...initialImages]);
   <div id="gallery" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <GalleryCard v-for="(image, index) in imageList" :key="index" :index="index" :image-src="image.src"
+      <GalleryCard v-for="(image, index) in galleryList" :key="index" :index="index" :image-src="image.src"
         :card-name="image.name" />
-
     </div>
   </div>
   <div id="contact"

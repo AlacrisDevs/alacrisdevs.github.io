@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { imageList } from '../GalleryData.js';
+import { galleryList } from '../lists/GalleryData.js';
 const props = defineProps({
     index: {
         type: Number,
@@ -18,7 +18,7 @@ const props = defineProps({
 
 const isOverlayOpen = ref(false);
 const currentImageIndex = ref(props.index);
-const images = ref(imageList);
+const images = ref(galleryList);
 
 const toggleOverlay = () => {
     isOverlayOpen.value = !isOverlayOpen.value;
@@ -53,9 +53,9 @@ const showPreviousImage = () => {
         class="fixed inset-0 px-8 xl:px-32 py-16 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-200 ease-in-out"
         :class="[isOverlayOpen ? 'opacity-100 transition-opacity duration-200 ease-in-out' : 'opacity-0 transition-opacity duration-200 ease-in-out']">
         <img class="w-auto h-1/3 xl:h-3/4 lg:h-1/2 md:h-2/5 sm:h-1/3 aspect-auto relative"
-            :src="imageList[currentImageIndex].src" :alt="imageList[currentImageIndex].name" />
+            :src="galleryList[currentImageIndex].src" :alt="galleryList[currentImageIndex].name" />
 
-        <h3 class="text-light">{{ imageList[currentImageIndex].name }}</h3>
+        <h3 class="text-light">{{ galleryList[currentImageIndex].name }}</h3>
 
         <button @click.prevent="toggleOverlay" class="p-2 absolute top-24 right-6 z-[2]">
             <svg class="w-8 xl:w-16 h-8 xl:h-16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" >
@@ -72,7 +72,7 @@ const showPreviousImage = () => {
             </svg>
         </button>
 
-        <button v-if="currentImageIndex < imageList.length - 1" @click.prevent="showNextImage"
+        <button v-if="currentImageIndex < galleryList.length - 1" @click.prevent="showNextImage"
             class="p-2 absolute right-6 z-[2]">
             <svg class="w-8 xl:w-16 h-8 xl:h-16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 27L21 16L10 5" stroke="#E9F2FF" stroke-width="4" />
