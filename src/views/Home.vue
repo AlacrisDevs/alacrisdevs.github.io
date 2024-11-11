@@ -18,7 +18,7 @@ const galleryList = ref([...initialMemories]);
 
 <template>
   <div id="who-am-i"
-    class="w-full px-8 xl:px-32 bg-[url('/images/hero_bg.png')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
+    class="w-full px-8 xl:px-32 bg-darkest bg-[url('/images/hero_bg.png')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
     <div class="w-full xl:w-1/2 py-8 xl:px-16 flex-col justify-center items-start gap-8 flex">
       <h2>Who am I?</h2>
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
@@ -37,7 +37,7 @@ const galleryList = ref([...initialMemories]);
     </div>
     <div
       class="w-full xl:w-1/2 pt-8 self-stretch flex-col xl:flex-row justify-center xl:justify-end items-center xl:items-end flex">
-      <img class="w-3/4" src="../../public/images/hero.png" />
+      <img class="w-3/4" src="../../images/hero.png" />
     </div>
   </div>
   <div id="projects" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">

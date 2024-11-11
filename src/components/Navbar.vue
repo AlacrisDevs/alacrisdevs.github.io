@@ -41,10 +41,7 @@ function scrollToId(id: string): void {
         </div>
     </div>
     <div @click.prevent="toggleMenu" v-if="isMenuOpen"
-        class="fixed inset-0 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8"
-        :class="[
-            'transition-all duration-200 ease-in-out', isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0' 
-            ]">
+        class="fixed inset-0 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8">
         <Button button-text="About" @click.prevent="{ scrollToId('who-am-i'); toggleMenu }" />
         <Button button-text="Projects" @click.prevent="{ scrollToId('projects'); toggleMenu }" />
         <Button button-text="Gallery" @click.prevent="{ scrollToId('gallery'); toggleMenu }" />

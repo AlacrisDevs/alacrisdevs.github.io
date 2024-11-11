@@ -50,15 +50,14 @@ const showPreviousImage = () => {
             :alt="cardName" />
     </button>
     <div v-if="isOverlayOpen"
-        class="fixed inset-0 px-8 xl:px-32 py-16 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-200 ease-in-out"
-        :class="[isOverlayOpen ? 'opacity-100 transition-opacity duration-200 ease-in-out' : 'opacity-0 transition-opacity duration-200 ease-in-out']">
+        class="fixed inset-0 px-8 xl:px-32 py-16 bg-dark bg-opacity-95 z-[1] flex flex-col items-center justify-center gap-8">
         <img class="w-auto h-1/3 xl:h-3/4 lg:h-1/2 md:h-2/5 sm:h-1/3 aspect-auto relative"
             :src="galleryList[currentImageIndex].src" :alt="galleryList[currentImageIndex].name" />
 
         <h3 class="text-light">{{ galleryList[currentImageIndex].name }}</h3>
 
         <button @click.prevent="toggleOverlay" class="p-2 absolute top-24 right-6 z-[2]">
-            <svg class="w-8 xl:w-16 h-8 xl:h-16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" >
+            <svg class="w-8 xl:w-16 h-8 xl:h-16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke="#E9F2FF" stroke-width="4">
                     <line x1="5" y1="5" x2="27" y2="27" />
                     <line x1="5" y1="27" x2="27" y2="5" />
