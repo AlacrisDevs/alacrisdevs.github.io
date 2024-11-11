@@ -37,7 +37,7 @@ const galleryList = ref([...initialMemories]);
     </div>
     <div
       class="w-full xl:w-1/2 pt-8 self-stretch flex-col xl:flex-row justify-center xl:justify-end items-center xl:items-end flex">
-      <img class="w-3/4" src="../../images/hero.png" />
+      <img class="w-3/4" src="../../public/images/hero.png" />
     </div>
   </div>
   <div id="projects" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
