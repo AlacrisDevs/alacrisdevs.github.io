@@ -2,13 +2,13 @@ export const gameList = [
     {
         src: '/images/games/game_packet_tracers.svg', 
         url: 'https://alacrisdevs.itch.io/packet-tracers',
-        name: 'Packet Tracers',
+        name: 'Packet&nbsp;Tracers',
         description: 'Responsible for all the visuals and sound.'
     },
     {
         src: '/images/games/game_lux_mundi.svg', 
         url: 'https://alacrisdevs.itch.io/lux-mundi',
-        name: 'Lux Mundi',
+        name: 'Lux&nbsp;Mundi',
         description: 'Solo-made project done during a camp.'
     },
     {
