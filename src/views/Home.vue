@@ -18,8 +18,8 @@ const galleryList = ref([...initialMemories]);
 
 <template>
   <div id="who-am-i"
-    class="w-full px-8 xl:px-32 bg-darkest bg-[url('/images/hero_bg.jpg')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
-    <div class="w-full xl:w-1/2 py-8 xl:px-16 flex-col justify-center items-start gap-8 flex">
+    class="w-full px-8 xl:px-32 pt-24 bg-darkest bg-[url('/images/hero_bg.jpg')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
+    <div class="w-full xl:w-1/2 pb-24 xl:px-16 flex-col justify-center items-start gap-8 flex">
       <h2>Who am I?</h2>
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
         design, event planning and management, and game development.<br /><br />
@@ -36,32 +36,32 @@ const galleryList = ref([...initialMemories]);
       </p>
     </div>
     <div
-      class="w-full xl:w-1/2 pt-8 self-stretch flex-col xl:flex-row justify-center xl:justify-end items-center xl:items-end flex">
+      class="w-full xl:w-1/2 self-stretch flex-col xl:flex-row justify-center xl:justify-end items-center xl:items-end flex">
       <img class="w-3/4" src="../../public/images/hero.png" />
     </div>
   </div>
-  <div id="projects" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
+  <div id="projects" class="w-full px-8 xl:px-32 py-24 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">My games and ongoing projects</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <LinkCard v-for="(card, index) in gameList" :key="index" :card-url="card.url" :image-src="card.src"
         :card-name="card.name" :card-description="card.description" />
     </div>
   </div>
-  <div class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
+  <div class="w-full px-8 xl:px-32 py-24 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Events I'm organizing</h2>
     <div class="grid grid-cols-2 gap-4 place-items-center">
       <LinkCard v-for="(card, index) in eventList" :key="index" :card-url="card.url" :image-src="card.src"
         :card-name="card.name" :card-description="card.description" />
     </div>
   </div>
-  <div class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
+  <div class="w-full px-8 xl:px-32 py-24 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Selection of graphic design commissions</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <ImageCard v-for="(card, index) in designList" :key="index" :image-src="card.src" :card-name="card.name"
         :card-description="card.description" />
     </div>
   </div>
-  <div class="w-full px-8 xl:px-32 py-16 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
+  <div class="w-full px-8 xl:px-32 py-24 bg-darkest flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Organizations and brands I've worked with</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <LinkCard v-for="(card, index) in brandList" :key="index" :card-url="card.url" :image-src="card.src"
@@ -70,7 +70,7 @@ const galleryList = ref([...initialMemories]);
     <br />
     <h2 class="text-center">...and the list doesn't stop there!</h2>
   </div>
-  <div id="gallery" class="w-full px-8 xl:px-32 py-16 bg-dark flex-col justify-center items-center gap-8 inline-flex">
+  <div id="gallery" class="w-full px-8 xl:px-32 py-24 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
       <GalleryCard v-for="(image, index) in galleryList" :key="index" :index="index" :image-src="image.src"
@@ -78,7 +78,7 @@ const galleryList = ref([...initialMemories]);
     </div>
   </div>
   <div id="contact"
-    class="w-full px-8 xl:px-32 py-16 bg-[url('/images/footer_bg.jpg')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
+    class="w-full px-8 xl:px-32 py-24 bg-[url('/images/footer_bg.jpg')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
     <h2>Get in touch</h2>
     <p class="flex-row gap-2 items-center flex">
       <Gmail /><a href="mailto:alacris@induo.dev">alacris@induo.dev</a>
