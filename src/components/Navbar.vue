@@ -6,9 +6,14 @@ import Hamburger from './buttons/Hamburger.vue';
 
 const isMenuOpen = ref(false);
 
-function toggleMenu() {
+const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value;
-}
+    setupScrollLock();
+};
+
+const setupScrollLock = () => {
+    document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
+};
 
 function scrollToId(id: string): void {
     const element = document.getElementById(id);
