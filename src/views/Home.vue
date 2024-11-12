@@ -18,7 +18,7 @@ const galleryList = ref([...initialMemories]);
 
 <template>
   <div id="who-am-i"
-    class="w-full px-8 xl:px-32 pt-24 bg-darkest bg-[url('/images/hero_bg.jpg')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
+    class="w-full px-8 xl:px-32 pt-24 bg-darkest bg-[url('/images/hero_bg.png')] bg-cover bg-center flex-col xl:flex-row justify-between items-center flex">
     <div class="w-full xl:w-1/2 pb-24 xl:px-16 flex-col justify-center items-start gap-8 flex">
       <h2>Who am I?</h2>
       <p>My name is <b>AlacrisDevs</b> (or Alex). I am a versatile creator from Estonia. I specialize in graphic
@@ -78,7 +78,7 @@ const galleryList = ref([...initialMemories]);
     </div>
   </div>
   <div id="contact"
-    class="w-full px-8 xl:px-32 py-24 bg-[url('/images/footer_bg.jpg')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
+    class="w-full px-8 xl:px-32 py-24 bg-[url('/images/footer_bg.png')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
     <h2>Get in touch</h2>
     <p class="flex-row gap-2 items-center flex">
       <Gmail /><a href="mailto:alacris@induo.dev">alacris@induo.dev</a>
