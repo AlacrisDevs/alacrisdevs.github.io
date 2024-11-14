@@ -3,7 +3,7 @@ export const brandList = [
         src: '/images/orgs/org_taltech_it.png', 
         url: 'https://taltech.ee/en/school-of-information-technologies',
         name: 'TalTech School of IT',
-        description: 'Commissioned designs like promotional material and stickers.'
+        description: 'Commissioned designs like promotional material.'
     },
     {
         src: '/images/orgs/org_gamedev_estonia.png', 
@@ -15,13 +15,13 @@ export const brandList = [
         src: '/images/orgs/org_lvlup.png', 
         url: 'https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/',
         name: 'LVLup! Video Game Museum',
-        description: 'Collaborated during gamedev events.'
+        description: 'Collaborated during game development events.'
     },
     {
         src: '/images/orgs/org_eka.png', 
         url: 'https://www.artun.ee/et/avaleht/',
         name: 'Estonian Academy of Arts',
-        description: 'Hosting regular meetups at EKA.'
+        description: 'Collaborating and hosting regular meetups on EKA grounds.'
     },
     {
         src: '/images/orgs/org_pycord.png', 

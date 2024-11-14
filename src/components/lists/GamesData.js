@@ -21,6 +21,6 @@ export const gameList = [
         src: '/images/games/game_awe.svg',
         url: 'https://induo.dev/',
         name: 'At World\'s End',
-        description: '[Currently in the works]'
+        description: '[Currently in the works - fight against time]'
     },
 ];
