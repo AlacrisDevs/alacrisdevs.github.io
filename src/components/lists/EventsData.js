@@ -3,7 +3,7 @@ export const eventList = [
         src: '/images/events/event_gamecamp.png', 
         url: 'https://gamecamp.ituk.ee/',
         name: 'TalTech GameCamp',
-        description: 'A combination of a game development bootcamp and a game jam.'
+        description: 'Estonia\'s biggest educational game development event/competition.'
     },
       {
         src: '/images/events/event_gamedev_guild.png', 
