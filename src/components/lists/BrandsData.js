@@ -12,15 +12,27 @@ export const brandList = [
         description: 'Designing event logos and organizing events.'
     },
     {
-        src: '/images/orgs/org_lillesalong.png', 
-        url: 'https://emajatutarlilled.ee/',
-        name: 'Lillegalerii Ema ja Tütar',
-        description: 'Created and designed the brand.'
+        src: '/images/orgs/org_lvlup.png', 
+        url: 'https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/',
+        name: 'LVLup! Video Game Museum',
+        description: 'Collaborated during gamedev events.'
+    },
+    {
+        src: '/images/orgs/org_eka.png', 
+        url: 'https://www.artun.ee/et/avaleht/',
+        name: 'Estonian Academy of Arts',
+        description: 'Hosting regular meetups at EKA.'
     },
     {
         src: '/images/orgs/org_pycord.png', 
         url: 'https://pycord.dev/',
         name: 'Pycord',
+        description: 'Created and designed the brand.'
+    },
+    {
+        src: '/images/orgs/org_lillesalong.png', 
+        url: 'https://emajatutarlilled.ee/',
+        name: 'Lillegalerii Ema ja Tütar',
         description: 'Created and designed the brand.'
     },
     {
