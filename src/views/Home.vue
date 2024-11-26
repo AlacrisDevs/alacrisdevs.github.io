@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { brandList } from '@/components/lists/BrandsData';
-import { designList } from '@/components/lists/DesignsData';
-import { eventList } from '@/components/lists/EventsData';
-import { gameList } from '@/components/lists/GamesData.js';
-import { galleryList as initialMemories } from '@/components/lists/GalleryData.js';
+import { gameList, eventList, designList, brandList, galleryList } from '@/components/lists/Data';
 import GalleryCard from '@/components/cards/GalleryCard.vue';
+import GalleryOverlay from '@/components/cards/GalleryOverlay.vue';
 import ImageCard from '@/components/cards/ImageCard.vue';
 import LinkCard from '@/components/cards/LinkCard.vue';
 import Discord from '@/components/icons/Discord.vue';
@@ -13,7 +10,36 @@ import Gmail from '@/components/icons/Gmail.vue';
 import LinkedIn from '@/components/icons/LinkedIn.vue';
 import YouTube from '@/components/icons/YouTube.vue';
 
-const galleryList = ref([...initialMemories]);
+const galleries = {
+    mainGallery: galleryList,
+};
+
+const galleryStates = ref<Record<string, { isOpen: boolean; currentIndex: number }>>(
+  Object.keys(galleries).reduce((acc, key) => {
+    acc[key] = { isOpen: false, currentIndex: 0 };
+    return acc;
+  }, {} as Record<string, { isOpen: boolean; currentIndex: number }>)
+);
+
+const setupScrollLock = (lock: boolean) => {
+  document.body.style.overflow = lock ? 'hidden' : '';
+};
+
+const openOverlay = (galleryKey: string, index: number) => {
+  galleryStates.value[galleryKey].isOpen = true;
+  galleryStates.value[galleryKey].currentIndex = index;
+  setupScrollLock(true);
+};
+
+const closeOverlay = (galleryKey: string) => {
+  galleryStates.value[galleryKey].isOpen = false;
+  setupScrollLock(false);
+};
+
+const updateIndex = (galleryKey: string, index: number) => {
+  galleryStates.value[galleryKey].currentIndex = index;
+};
+
 </script>
 
 <template>
@@ -73,9 +99,15 @@ const galleryList = ref([...initialMemories]);
   <div id="gallery" class="w-full px-8 xl:px-32 py-24 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
     <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <GalleryCard v-for="(image, index) in galleryList" :key="index" :index="index" :image-src="image.src"
-        :card-name="image.name" />
+      <GalleryCard v-for="(image, index) in galleries.mainGallery" :key="`mainGallery-${index}`"
+                :index="index" :image-src="image.src" :card-name="image.name"
+                @open-overlay="() => openOverlay('mainGallery', index)" />
     </div>
+    <GalleryOverlay v-if="galleryStates['mainGallery'].isOpen" :photos="galleries.mainGallery"
+            :currentIndex="galleryStates['mainGallery'].currentIndex"
+            :isOpen="galleryStates['mainGallery'].isOpen"
+            @close-overlay="() => closeOverlay('mainGallery')"
+            @update-index="(index) => updateIndex('mainGallery', index)" />
   </div>
   <div id="contact"
     class="w-full px-8 xl:px-32 py-24 bg-[url('/images/footer_bg.png')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">

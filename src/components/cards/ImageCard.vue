@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { designList } from '../lists/DesignsData.js';
 const props = defineProps<{
     imageSrc: string,
     cardName: string,
