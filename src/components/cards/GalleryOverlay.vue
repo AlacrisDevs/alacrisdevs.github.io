@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue'
 
 interface Photo {
-    src: string;
-    name: string;
+    src: string
+    name: string
 }
 
 const props = defineProps({
@@ -19,53 +19,52 @@ const props = defineProps({
         type: Boolean,
         required: true,
     },
-});
+})
 
-const emit = defineEmits(['close-overlay', 'update-index']);
+const emit = defineEmits(['close-overlay', 'update-index'])
 
 const handleClose = () => {
-    emit('close-overlay');
-};
+    emit('close-overlay')
+}
 
 const showNextImage = () => {
     if (props.currentIndex < props.photos.length - 1) {
-        emit('update-index', props.currentIndex + 1);
+        emit('update-index', props.currentIndex + 1)
     }
-};
+}
 
 const showPreviousImage = () => {
     if (props.currentIndex > 0) {
-        emit('update-index', props.currentIndex - 1);
+        emit('update-index', props.currentIndex - 1)
     }
-};
+}
 
 // Handle Keydown Events
 const handleKeyDown = (event: KeyboardEvent) => {
     switch (event.key) {
         case 'Escape':
-            handleClose();
+            handleClose()
             // console.log('Escape');
-            break;
+            break
         case 'ArrowRight':
-            showNextImage();
+            showNextImage()
             // console.log('ArrowRight');
-            break;
+            break
         case 'ArrowLeft':
-            showPreviousImage();
+            showPreviousImage()
             // console.log('ArrowLeft');
-            break;
+            break
     }
-};
+}
 
 onMounted(() => {
-    window.addEventListener('keydown', handleKeyDown);
-});
+    window.addEventListener('keydown', handleKeyDown)
+})
 
 onUnmounted(() => {
-    window.removeEventListener('keydown', handleKeyDown);
-});
+    window.removeEventListener('keydown', handleKeyDown)
+})
 </script>
-
 
 <template>
     <div v-if="isOpen"

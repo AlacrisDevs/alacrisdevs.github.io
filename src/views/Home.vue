@@ -11,7 +11,7 @@ import LinkedIn from '@/components/icons/LinkedIn.vue';
 import YouTube from '@/components/icons/YouTube.vue';
 
 const galleries = {
-    mainGallery: galleryList,
+  mainGallery: galleryList,
 };
 
 const galleryStates = ref<Record<string, { isOpen: boolean; currentIndex: number }>>(
@@ -98,16 +98,13 @@ const updateIndex = (galleryKey: string, index: number) => {
   </div>
   <div id="gallery" class="w-full px-8 xl:px-32 py-24 bg-dark flex-col justify-center items-center gap-8 inline-flex">
     <h2 class="text-center">Memories</h2>
-    <div class="grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-4 gap-4 place-items-center">
-      <GalleryCard v-for="(image, index) in galleries.mainGallery" :key="`mainGallery-${index}`"
-                :index="index" :image-src="image.src" :card-name="image.name"
-                @open-overlay="() => openOverlay('mainGallery', index)" />
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 place-items-center">
+      <GalleryCard v-for="(image, index) in galleries.mainGallery" :key="`mainGallery-${index}`" :index="index"
+        :image-src="image.src" :card-name="image.name" @open-overlay="() => openOverlay('mainGallery', index)" />
     </div>
     <GalleryOverlay v-if="galleryStates['mainGallery'].isOpen" :photos="galleries.mainGallery"
-            :currentIndex="galleryStates['mainGallery'].currentIndex"
-            :isOpen="galleryStates['mainGallery'].isOpen"
-            @close-overlay="() => closeOverlay('mainGallery')"
-            @update-index="(index) => updateIndex('mainGallery', index)" />
+      :currentIndex="galleryStates['mainGallery'].currentIndex" :isOpen="galleryStates['mainGallery'].isOpen"
+      @close-overlay="() => closeOverlay('mainGallery')" @update-index="(index) => updateIndex('mainGallery', index)" />
   </div>
   <div id="contact"
     class="w-full px-8 xl:px-32 py-24 bg-[url('/images/footer_bg.png')] bg-cover bg-center flex-col justify-between gap-4 items-center flex">
