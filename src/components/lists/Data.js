@@ -1,18 +1,18 @@
 export const gameList = [
     {
-        src: '/images/games/game_packet_tracers.svg', 
+        src: '/images/games/game_packet_tracers.svg',
         url: 'https://alacrisdevs.itch.io/packet-tracers',
         name: 'Packet Tracers',
         description: 'Responsible for all the visuals and sound.'
     },
     {
-        src: '/images/games/game_lux_mundi.svg', 
+        src: '/images/games/game_lux_mundi.svg',
         url: 'https://alacrisdevs.itch.io/lux-mundi',
         name: 'Lux Mundi',
         description: 'Solo-made project done during a camp.'
     },
     {
-        src: '/images/games/game_dichotomia.svg', 
+        src: '/images/games/game_dichotomia.svg',
         url: 'https://alacrisdevs.itch.io/dichotomia',
         name: 'Dichotomia',
         description: 'Responsible for all the visuals and sound.'
@@ -27,13 +27,13 @@ export const gameList = [
 
 export const eventList = [
     {
-        src: '/images/events/event_gamecamp.png', 
+        src: '/images/events/event_gamecamp.png',
         url: 'https://gamecamp.ituk.ee/',
         name: 'TalTech GameCamp',
         description: 'Estonia\'s biggest educational game development event/competition.'
     },
-      {
-        src: '/images/events/event_gamedev_guild.png', 
+    {
+        src: '/images/events/event_gamedev_guild.png',
         url: 'https://www.linkedin.com/posts/alacrisdevs_v10-of-gamedev-guild-is-a-go-weve-graduated-activity-7252672283402534912-Iud0/',
         name: 'Gamedev Guild',
         description: 'A casual meetup for Estonian gamedevs to showcase projects.'
@@ -53,51 +53,39 @@ export const designList = [
 
 export const brandList = [
     {
-        src: '/images/orgs/org_taltech_it.png', 
+        src: '/images/orgs/org_taltech_it.png',
         url: 'https://taltech.ee/en/school-of-information-technologies',
         name: 'TalTech School of IT',
         description: 'Commissioned designs like promotional material.'
     },
     {
-        src: '/images/orgs/org_gamedev_estonia.png', 
+        src: '/images/orgs/org_gamedev_estonia.png',
         url: 'https://gamedevestonia.ee/',
         name: 'GameDev Estonia',
         description: 'Designing event logos and organizing events.'
     },
     {
-        src: '/images/orgs/org_lvlup.png', 
+        src: '/images/orgs/org_lvlup.png',
         url: 'https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/',
         name: 'LVLup! Video Game Museum',
         description: 'Collaborated during game development events.'
     },
     {
-        src: '/images/orgs/org_eka.png', 
+        src: '/images/orgs/org_eka.png',
         url: 'https://www.artun.ee/et/avaleht/',
         name: 'Estonian Academy of Arts',
         description: 'Collaborating and hosting regular meetups on EKA grounds.'
     },
     {
-        src: '/images/orgs/org_pycord.png', 
-        url: 'https://pycord.dev/',
-        name: 'Pycord',
-        description: 'Created and designed the brand.'
-    },
-    {
-        src: '/images/orgs/org_lillesalong.png', 
+        src: '/images/orgs/org_lillesalong.png',
         url: 'https://emajatutarlilled.ee/',
         name: 'Lillegalerii Ema ja Tütar',
         description: 'Created and designed the brand.'
     },
     {
-        src: '/images/orgs/org_nurk.png', 
+        src: '/images/orgs/org_nurk.png',
         url: 'https://www.instagram.com/ofnurk/',
         name: 'ÕF Nurk',
-        description: 'Created and designed the brand.'
-    },
-    {
-        src: '/images/orgs/org_mokamaare.png', 
-        url: 'https://www.instagram.com/kiut.gloss/',
-        name: 'ÕF Mokamääre',
         description: 'Created and designed the brand.'
     },
 ];
