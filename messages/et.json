@@ -1,4 +1,12 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Tere, {name} pärit et!"
+	"nav_about": "Minust",
+	"nav_projects": "Projektid",
+	"nav_events": "Üritused",
+	"nav_collaborations": "Koostöö",
+	"nav_gallery": "Galerii",
+	"nav_contact": "Kontakt",
+	"hero_title": "Alacris Devs",
+	"hero_lead": "Ma loon mänge, juhendan arendajaid ja kasvatan kogukondi, sest parimad kogemused algavad parimatest inimestest.",
+	"about_title": "Kes ma olen?",
+	"about_body": "Mina olen Alex, Eesti mänguarendaja, kes usub, et parimad asjad sünnivad tugevatest kogukondadest. Sellepärast korraldan ma TalTech GameCampi ja Gamedev Guildi - need üritused on saanud oluliseks kogunemiskohaks Eesti kasvavale mänguarendajate kogukonnale.\n\nMinu tehniline teekond algas ülikoolis, kus ma arendasin ja avaldasin Packet Tracersi - mitmikmängija mängu, mis õpetas mulle nii probleemide lahendamist kui ka programmeerimist. Täna kasutan seda kogemust oma töös Tallinna Tehnikaülikooli (TalTech) abiõppejõuna, kus juhendan järgmise põlvkonna arendajaid ja aitan neil Java ja LibGDX raamistikuga toime tulla. \n\nMinu motivatsiooniks on loomise rõõm - ma armastan protsessi rohkem kui tulemust. Olgu see siis tudengitega koodiprobleemide lahendamine või arendajate kokkutoomine meie üritustele, ma leian oma energia just millegi loomise protsessist. Ma olen kirglik ruumide loomise suhtes, kus teised saavad kogeda sama loomingulist protsessi."
 }

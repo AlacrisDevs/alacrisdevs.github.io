@@ -3,9 +3,12 @@
     import { m } from "$lib/paraglide/messages.js";
     import Button from "$lib/components/Button.svelte";
     import Card from "$lib/components/Card.svelte";
+    import Carousel from "$lib/components/Carousel.svelte";
     import favicon from "$lib/assets/icons/favicon.svg";
     import enFlag from "$lib/assets/icons/en.svg";
     import etFlag from "$lib/assets/icons/et.svg";
+    import heroImg from "$lib/assets/images/hero.png";
+    import headerImg from "$lib/assets/images/header.jpg";
 
     let mobileMenuOpen = false;
 
@@ -23,7 +26,7 @@
 </script>
 
 <!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 bg-secondary/95 backdrop-blur-sm z-50">
+<nav class="fixed top-0 left-0 right-0 bg-[#0A121F]/75 backdrop-blur-sm z-50">
     <div class="w-full p-4">
         <div class="flex justify-between items-center h-12">
             <!-- Logo -->
@@ -38,16 +41,16 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-1">
                 <div class="flex items-baseline">
-                    <Button variant="tertiary" href="#about">About</Button>
-                    <Button variant="tertiary" href="#projects">Projects</Button
+                    <Button variant="tertiary" href="#about">{m.nav_about()}</Button>
+                    <Button variant="tertiary" href="#projects">{m.nav_projects()}</Button
                     >
-                    <Button variant="tertiary" href="#events">Events</Button>
+                    <Button variant="tertiary" href="#events">{m.nav_events()}</Button>
                     <Button variant="tertiary" href="#collaborations"
-                        >Collaborations</Button
+                        >{m.nav_collaborations()}</Button
                     >
-                    <Button variant="tertiary" href="#gallery">Gallery</Button>
+                    <Button variant="tertiary" href="#gallery">{m.nav_gallery()}</Button>
                 </div>
-                <Button variant="primary" href="#contact">Contact</Button>
+                <Button variant="primary" href="#contact">{m.nav_contact()}</Button>
             </div>
 
             <!-- Desktop Language Switcher -->
@@ -109,7 +112,7 @@
             <div
                 class="flex flex-col items-center justify-center h-full bg-secondary/50 backdrop-blur-sm"
             >
-                <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-col items-center gap-2">
                     <Button
                         variant="tertiary"
                         href="#about"
@@ -142,7 +145,7 @@
                     >
 
                     <!-- Mobile Language Switcher -->
-                    <div class="flex items-center space-x-4 mt-8">
+                    <div class="flex items-center">
                         <button
                             class="p-2 hover:opacity-80 transition-opacity"
                             on:click={() => {
@@ -175,51 +178,47 @@
     <!-- Hero Section -->
     <section
         id="hero"
-        class="min-h-screen bg-secondary flex items-center justify-center"
+        class="relative flex items-end gap-16 px-[15%] py-0 w-full bg-cover bg-center bg-no-repeat"
+        style={`background-image: url('${headerImg}');`}
     >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="h1 text-white mb-6">Welcome to My Portfolio</h1>
-            <p class="lead text-white/80 mb-8 max-w-2xl mx-auto">
-                I'm a passionate developer creating amazing digital experiences.
-            </p>
-            <div
-                class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-                <Button
-                    variant="primary"
-                    on:click={() => console.log("Get Started clicked")}
-                >
-                    Get Started
-                </Button>
-                <Button
-                    variant="secondary"
-                    on:click={() => console.log("Learn More clicked")}
-                >
-                    Learn More
-                </Button>
-            </div>
-            <div class="mt-4">
-                <Button variant="secondary" disabled={true}>
-                    Disabled Secondary
-                </Button>
-            </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#0A121F]/90"></div>
+        <!-- Text section -->
+        <div
+            class="z-10 flex flex-col justify-center items-center md:items-start gap-4 self-stretch py-16 md:py-24 w-full md:w-1/2"
+        >
+            <h1 class="h1 text-white text-center md:text-left">{m.hero_title()}</h1>
+            <p class="lead text-white/80 text-center md:text-left">{m.hero_lead()}</p>
+        </div>
+
+        <!-- Second section with image -->
+        <div class="z-10 flex flex-col items-start pt-16 w-1/2 md:block hidden">
+            <img
+                src={heroImg}
+                alt="AlacrisDevs"
+                class="block max-w-full h-auto"
+            />
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-tertiary/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="h2 text-center text-white mb-12">About Me</h2>
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="p text-white/80 mb-6">
-                    This is where your about content will go. Tell your story,
-                    share your passion, and let visitors know who you are.
-                </p>
-                <p class="p text-white/80">
-                    Add more details about your background, skills, and what
-                    drives you in your work.
-                </p>
+    <section
+        id="about"
+        class="flex flex-col lg:flex-row items-center gap-16 px-[10%] py-0 w-full"
+    >
+        <!-- Carousel -->
+        <div class="w-full lg:w-1/2 order-2 lg:order-none">
+            <div class="flex flex-col items-start py-16 w-full">
+                <Carousel />
             </div>
+        </div>
+
+        <!-- Text section -->
+        <div
+            class="flex flex-col justify-center items-center lg:items-start gap-4 py-16 self-stretch w-full lg:w-1/2 order-1 lg:order-none"
+        >
+            <h2 class="h2 text-white text-center lg:text-left">{m.about_title()}</h2>
+            <p class="p text-white/80 text-center lg:text-left whitespace-pre-line">{m.about_body()}</p>
         </div>
     </section>
 

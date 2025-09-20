@@ -1,4 +1,12 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"nav_about": "About",
+	"nav_projects": "Projects",
+	"nav_events": "Events",
+	"nav_collaborations": "Collaborations",
+	"nav_gallery": "Gallery",
+	"nav_contact": "Contact",
+	"hero_title": "Alacris Devs",
+	"hero_lead": "I make games, guide developers, and grow communities - because the best experiences start with the best people.",
+	"about_title": "About",
+	"about_body": "I'm Alex, a game developer from Estonia who believes the best games come from strong communities. That's why I organize TalTech GameCamp and Gamedev Guild - events that have become essential gathering spots for Estonia's growing game dev scene.\n\nMy technical journey started during university, where I developed and published Packet Tracers, a multiplayer game that taught me as much about problem-solving as it did about code. Today, I bring that experience to my role as a tutoring assistant at Tallinn University of Technology (TalTech), where I mentor the next generation of developers and help them navigate Java and the LibGDX framework.\n\nWhat drives me is the joy of creation - I love the process more than the result. Whether it's working through code challenges with students or bringing together developers for our events, the journey of building something is where I find my energy. I'm passionate about creating spaces where others can experience that same creative process."
 }
