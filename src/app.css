@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'tailwindcss';
+
+/* CSS Custom Properties */
+:root {
+    /* Color styles */
+    --primary: rgba(0, 108, 255, 1);
+    --secondary: rgba(10, 18, 31, 1);
+    --tertiary: rgba(233, 242, 255, 1);
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+    --text: rgba(255, 255, 255, 1);
+
+    /* Text-size styles */
+    --h1: 3rem;
+    --h2: 2.25rem;
+    --h3: 1.75rem;
+    --h4: 1.38rem;
+    --h5: 1.12rem;
+    --p: 1rem;
+    --lead: 1.12rem;
+    --small: 0.88rem;
+    --button: 1rem;
+
+    /* Line height */
+    --line-height: 1.2;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-padding-top: 4rem;
+    /* Account for fixed navbar height */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: var(--line-height);
+    color: var(--text);
+    background-color: var(--secondary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography classes */
+.font-urbanist {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Heading styles */
+.h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--h1);
+    font-weight: 700;
+    /* bold */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--h2);
+    font-weight: 600;
+    /* semibold */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.h3 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--h3);
+    font-weight: 600;
+    /* semibold */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.h4 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--h4);
+    font-weight: 600;
+    /* semibold */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--h5);
+    font-weight: 500;
+    /* medium */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+/* Paragraph styles */
+.p {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--p);
+    font-weight: 400;
+    /* regular */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.p-light {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--p);
+    font-weight: 300;
+    /* light */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.lead {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--lead);
+    font-weight: 400;
+    /* regular */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+.small {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--small);
+    font-weight: 400;
+    /* regular */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+/* Button styles */
+.button {
+    font-family: 'Urbanist', sans-serif;
+    font-size: var(--button);
+    font-weight: 600;
+    /* semibold */
+    line-height: var(--line-height);
+    color: var(--text);
+}
+
+/* Utility classes for colors */
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-tertiary {
+    color: var(--tertiary);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-tertiary {
+    background-color: var(--tertiary);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+/* Border utilities */
+.border-primary {
+    border-color: var(--primary);
+}
+
+.border-secondary {
+    border-color: var(--secondary);
+}
+
+.border-tertiary {
+    border-color: var(--tertiary);
+}
+
+/* Button Component Styles */
+.btn-primary {
+    background-color: var(--primary);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0A121F;
+    opacity: 0;
+    transition: opacity 150ms ease;
+    pointer-events: none;
+}
+
+.btn-primary:hover::before {
+    opacity: 0.2;
+}
+
+.btn-primary:active::before {
+    opacity: 0.5;
+}
+
+.btn-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Secondary Button Styles */
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--tertiary);
+    color: var(--tertiary);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    opacity: 0;
+    transition: opacity 150ms ease;
+    pointer-events: none;
+}
+
+.btn-secondary:hover::before {
+    opacity: 0.1;
+}
+
+.btn-secondary:active::before {
+    background-color: #0A121F;
+    opacity: 0.1;
+}
+
+.btn-secondary:active {
+    border-color: rgba(233, 242, 255, 0.4);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Ensure single focus ring for all buttons */
+button:focus,
+a:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--tertiary) !important;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--tertiary) !important;
+}
+
+/* Tertiary Button Styles */
+.btn-tertiary {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-tertiary .text-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-tertiary .text-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 150ms ease;
+}
+
+.btn-tertiary:hover .text-underline::after {
+    background-color: var(--white);
+}
+
+.btn-tertiary:active .text-underline::after {
+    background-color: var(--primary);
+}
+
+.btn-tertiary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Card Component Styles */
+.card-container {
+    display: flex;
+    width: 100%;
+    min-height: 128px;
+    max-height: 200px;
+    align-items: stretch;
+    flex-shrink: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
+    background: var(--secondary);
+    overflow: hidden;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.60);
+}
+
+.card-image {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background: lightgray 50% / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.card-text-container {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 1 0;
+    width: 50%;
+    height: 100%;
+    background: var(--secondary);
+}
+
+.card-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.card-description {
+    width: 100%;
+    flex: 1 1 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.4;
+}
+
+/* Card responsive styles */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: none;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        padding: 0;
+    }
+
+    .card-text-container {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-container {
+        width: 100%;
+        max-width: 600px;
+    }
+}

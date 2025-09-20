@@ -1,17 +1,38 @@
-# Hi, I’m AlacrisDevs (or Alex) 👋
+# sv
 
-I am a versatile creator from Estonia, specializing in **graphic design**, **event planning**, and **game development**.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## About Me
+## Creating a project
 
-Graphic design has been my creative outlet since 2019. Over the years, I’ve had the privilege of collaborating with over 30 clients to craft impactful **logos** and **brand identities** for both individuals and organizations. I’m passionate about bringing ideas to life through design, always striving to deliver memorable and effective visual experiences.
+If you're seeing this, you've probably already done this step. Congrats!
 
-In addition to my work as a designer, I’m deeply involved in **game development**. In my free time, I explore programming and work on various game projects. One notable project is **Packet Tracers**, a multiplayer game I developed during my studies.
+```sh
+# create a new project in the current directory
+npx sv create
 
-## Events and Community
+# create a new project in my-app
+npx sv create my-app
+```
 
-I am also the main organizer of **TalTech GameCamp** and **Gamedev Guild**, events dedicated to connecting developers and enthusiasts. These platforms, hosted in collaboration with **Estonian game developers** and **TalTech Tallinn University of Technology**, have become key hubs for Estonia’s growing game development community. Through these events, I aim to foster knowledge sharing, networking, and collaboration within the industry.
+## Developing
 
-## My Portfolio
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-This website, which I built using **Vue**, **HTML**, **CSS**, and **JavaScript**, serves as a platform to showcase my portfolio of work. It’s a place where I can demonstrate my design and development skills, as well as provide insights into my creative process.
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

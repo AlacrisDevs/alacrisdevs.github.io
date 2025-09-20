@@ -1,0 +1,4 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Tere, {name} pärit et!"
+}

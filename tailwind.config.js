@@ -1,35 +1,40 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './views/**/*.{html,js,vue}',
-    './components/**/*.{html,js,vue}',
-    './src/**/*.{html,js,jsx,ts,tsx,vue}',
-    './index.html',
-  ],
-  theme: {
-    extend: {
-      screens: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-       },
-      colors: {
-        'black': "#000000",
-        'darkest': "#000814",
-        'dark': "#0a121f",
-        'blue': "#006cff",
-        'light': "#e9f2ff",
-        'white': "#ffffff",
-        'shadow': "#000000"
-      },
-      fontSize: {
-        'base': "1rem",
-        'lg': "1.25rem",
-        'xl': "1.5rem",
-        '2xl': "2rem"
-      },
+    content: ['./src/**/*.{html,js,svelte,ts}'],
+    theme: {
+        extend: {
+            colors: {
+                primary: 'rgba(0, 108, 255, 1)',
+                secondary: 'rgba(10, 18, 31, 1)',
+                tertiary: 'rgba(233, 242, 255, 1)',
+                text: 'rgba(255, 255, 255, 1)',
+            },
+            fontFamily: {
+                'urbanist': ['Urbanist', 'sans-serif'],
+                'roboto': ['Roboto', 'sans-serif'],
+            },
+            fontSize: {
+                'h1': '3rem',
+                'h2': '2.25rem',
+                'h3': '1.75rem',
+                'h4': '1.38rem',
+                'h5': '1.12rem',
+                'p': '1rem',
+                'lead': '1.12rem',
+                'small': '0.88rem',
+                'button': '1rem',
+            },
+            lineHeight: {
+                'tight': '1.2',
+            },
+            fontWeight: {
+                'light': '300',
+                'normal': '400',
+                'medium': '500',
+                'semibold': '600',
+                'bold': '700',
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 }
