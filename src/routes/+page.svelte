@@ -222,31 +222,37 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Games Section -->
     <section id="projects" class="py-20 bg-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="h2 text-center text-white mb-12">Projects</h2>
-            <div class="flex flex-col items-center gap-8">
-                <!-- Project cards will go here -->
+            <h2 class="h2 text-center text-white mb-12">My games and ongoing projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card
-                    imageSrc="https://via.placeholder.com/274x128/4A90E2/FFFFFF?text=Project+1"
-                    imageAlt="Project 1 preview"
-                    title="E-Commerce Platform"
-                    description="A modern e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment processing, and responsive design. Includes admin dashboard, customer analytics, and mobile app integration."
+                    imageSrc="https://via.placeholder.com/274x128/0D5C8E/FFFFFF?text=Packet+Tracers"
+                    imageAlt="Packet Tracers"
+                    title="Packet Tracers"
+                    description="Defend your network from the impending viral invasion!"
                     href="#"
                 />
                 <Card
-                    imageSrc="https://via.placeholder.com/274x128/7ED321/FFFFFF?text=Project+2"
-                    imageAlt="Project 2 preview"
-                    title="Task Management App"
-                    description="Collaborative task management application with real-time updates, team collaboration features, and advanced project tracking. Built with modern web technologies and cloud infrastructure."
+                    imageSrc="https://via.placeholder.com/274x128/1A1A1A/FFFFFF?text=Lux+Mundi"
+                    imageAlt="Lux Mundi"
+                    title="Lux Mundi"
+                    description="A visually soothing time‑killer sandbox made in 4 days."
                     href="#"
                 />
                 <Card
-                    imageSrc="https://via.placeholder.com/274x128/F5A623/FFFFFF?text=Project+3"
-                    imageAlt="Project 3 preview"
-                    title="Data Visualization Dashboard"
-                    description="Interactive data visualization dashboard for business analytics, featuring custom charts, real-time data feeds, and export capabilities. Optimized for performance and user experience."
+                    imageSrc="https://via.placeholder.com/274x128/BD2A2E/FFFFFF?text=Dichotomia"
+                    imageAlt="Dichotomia [GGJ Latvia 2022]"
+                    title="Dichotomia [GGJ Latvia 2022]"
+                    description="Fight your inner demon, Jekyll. Fight it."
+                    href="#"
+                />
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/F2C94C/111111?text=At+World's+End"
+                    imageAlt="At World's End"
+                    title="At World's End"
+                    description="[Currently in the works – fight against time]"
                     href="#"
                 />
             </div>
@@ -256,24 +262,22 @@
     <!-- Events Section -->
     <section id="events" class="py-20 bg-tertiary/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="h2 text-center text-white mb-12">Events</h2>
-            <div class="max-w-4xl mx-auto">
-                <p class="p text-center text-white/80 mb-8">
-                    Share your speaking engagements, workshops, conferences, and
-                    other professional events.
-                </p>
-                <!-- Event cards will go here -->
-                <div class="space-y-6">
-                    <div
-                        class="bg-secondary/50 p-6 rounded-lg border border-tertiary/20"
-                    >
-                        <h3 class="h4 text-white mb-2">Event Title</h3>
-                        <p class="small text-white/60 mb-2">Date & Location</p>
-                        <p class="p text-white/80">
-                            Event description will go here.
-                        </p>
-                    </div>
-                </div>
+            <h2 class="h2 text-center text-white mb-12">Events I'm organizing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/6C5CE7/FFFFFF?text=TalTech+GameCamp"
+                    imageAlt="TalTech GameCamp"
+                    title="TalTech GameCamp"
+                    description="Estonia’s biggest educational game development event/competition."
+                    href="#"
+                />
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/0F172A/FFFFFF?text=GameDev+Guild"
+                    imageAlt="GameDev Guild"
+                    title="GameDev Guild"
+                    description="A casual meetup for Estonian gamedevs to showcase projects."
+                    href="#"
+                />
             </div>
         </div>
     </section>
@@ -281,33 +285,36 @@
     <!-- Collaborations Section -->
     <section id="collaborations" class="py-20 bg-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="h2 text-center text-white mb-12">Collaborations</h2>
-            <div class="max-w-4xl mx-auto">
-                <p class="p text-center text-white/80 mb-8">
-                    Showcase your partnerships, team projects, and collaborative
-                    work.
-                </p>
-                <!-- Collaboration cards will go here -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div
-                        class="bg-tertiary/10 p-6 rounded-lg border border-tertiary/20"
-                    >
-                        <h3 class="h4 text-white mb-4">Collaboration Title</h3>
-                        <p class="p text-white/80 mb-4">
-                            Description of the collaboration.
-                        </p>
-                        <p class="small text-white/60">Partner/Organization</p>
-                    </div>
-                    <div
-                        class="bg-tertiary/10 p-6 rounded-lg border border-tertiary/20"
-                    >
-                        <h3 class="h4 text-white mb-4">Collaboration Title</h3>
-                        <p class="p text-white/80 mb-4">
-                            Description of the collaboration.
-                        </p>
-                        <p class="small text-white/60">Partner/Organization</p>
-                    </div>
-                </div>
+            <h2 class="h2 text-center text-white mb-12">Organizations and brands I've worked with</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/111827/FFFFFF?text=TalTech"
+                    imageAlt="TalTech School of IT"
+                    title="TalTech School of IT"
+                    description="TalTech School of Information Technologies prepares specialists with bachelor’s, master’s and doctoral degrees in one of the fastest developing fields of science and technology, which is Information and Communication Technology."
+                    href="#"
+                />
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/1E293B/FFFFFF?text=GameDev+Estonia"
+                    imageAlt="GameDev Estonia"
+                    title="GameDev Estonia"
+                    description="GameDev Estonia is a non‑profit organization dedicated to fostering and coordinating the growth of the Estonian video game industry."
+                    href="#"
+                />
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/0F172A/FFFFFF?text=VKM"
+                    imageAlt="LVLup! Video Game Museum"
+                    title="LVLup! Video Game Museum"
+                    description="LVLup! Video Game Museum is an interactive video game museum located in Tallinn, Estonia, that focuses on the history and evolution of video games."
+                    href="#"
+                />
+                <Card
+                    imageSrc="https://via.placeholder.com/274x128/22C55E/111111?text=EKA"
+                    imageAlt="Estonian Academy of Arts"
+                    title="Estonian Academy of Arts"
+                    description="The Estonian Academy of Arts is the only public university in Estonia providing higher education in art, design, architecture, media, art history and conservation‑restoration."
+                    href="#"
+                />
             </div>
         </div>
     </section>
