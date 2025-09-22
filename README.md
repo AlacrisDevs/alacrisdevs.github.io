@@ -1,17 +1,76 @@
-# Hi, I’m AlacrisDevs (or Alex) 👋
+# AlacrisDevs — Portfolio
 
-I am a versatile creator from Estonia, specializing in **graphic design**, **event planning**, and **game development**.
+Creating games, mentoring developers, and growing communities — because the best experiences start with the best people.
 
-## About Me
+Website: https://alacrisdevs.github.io (or project path under GitHub Pages)
 
-Graphic design has been my creative outlet since 2019. Over the years, I’ve had the privilege of collaborating with over 30 clients to craft impactful **logos** and **brand identities** for both individuals and organizations. I’m passionate about bringing ideas to life through design, always striving to deliver memorable and effective visual experiences.
+---
 
-In addition to my work as a designer, I’m deeply involved in **game development**. In my free time, I explore programming and work on various game projects. One notable project is **Packet Tracers**, a multiplayer game I developed during my studies.
+## About
 
-## Events and Community
+I'm Alex, an Estonian game developer who believes great things are built by strong communities. That's why I organize TalTech GameCamp and the GameDev Guild — two key gathering points for Estonia’s growing game development community.
 
-I am also the main organizer of **TalTech GameCamp** and **Gamedev Guild**, events dedicated to connecting developers and enthusiasts. These platforms, hosted in collaboration with **Estonian game developers** and **TalTech Tallinn University of Technology**, have become key hubs for Estonia’s growing game development community. Through these events, I aim to foster knowledge sharing, networking, and collaboration within the industry.
+My technical journey began at university where I developed and published Packet Tracers — a multiplayer game that taught me problem solving and programming. Today I apply that experience as a teaching assistant at Tallinn University of Technology (TalTech), guiding the next generation through Java and the LibGDX framework.
 
-## My Portfolio
+I'm motivated by the joy of creating — I love the process even more than the results. Whether it's debugging code with students or bringing developers together at events, I get my energy from the act of making.
 
-This website, which I built using **Vue**, **HTML**, **CSS**, and **JavaScript**, serves as a platform to showcase my portfolio of work. It’s a place where I can demonstrate my design and development skills, as well as provide insights into my creative process.
+---
+
+## Projects
+
+- Packet Tracers
+  - Defend your network from the impending viral invasion!
+
+- Lux Mundi
+  - A visually soothing time‑killer sandbox made in 4 days.
+
+- Dichotomia [GGJ Latvia 2022]
+  - Fight your inner demon, Jekyll. Fight it.
+
+- At World's End (in progress)
+  - Currently in the works — fight against time.
+
+---
+
+## Events I Organize
+
+- TalTech GameCamp
+  - Estonia’s largest educational game development event/competition.
+
+- GameDev Guild
+  - A local meetup for Estonian game developers to showcase projects and connect.
+
+---
+
+## Collaborations & Partners
+
+- TalTech IT Faculty
+  - Prepares specialists at the bachelor's, master's, and doctoral levels in one of the fastest‑growing fields of science and technology.
+
+- GameDev Estonia
+  - A non‑profit organization dedicated to advancing and coordinating the growth of Estonia’s video game industry.
+
+- LVLup! Video Game Museum
+  - An interactive video game museum in Tallinn focused on the history and evolution of video games.
+
+- Estonian Academy of Arts (EKA)
+  - Estonia’s only public university providing higher education in art, design, architecture, media, art history, and conservation‑restoration.
+
+---
+
+## Gallery
+
+A curated selection of photos and highlights from events and projects. Captions and dates are localized; thumbnails are lazy‑loaded and keyboard accessible.
+
+---
+
+## Get in Touch
+
+- Email: alacrisdevs@gmail.com
+- Contact form is provided on the site; if it doesn’t work for you, email is the preferred fallback.
+
+---
+
+## License
+
+All rights reserved. Contact for collaboration or permissions: `alacrisdevs@gmail.com`.
