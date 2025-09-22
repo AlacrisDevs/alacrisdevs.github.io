@@ -75,6 +75,37 @@
     let touchStartY = 0;
     let touchActive = false;
     const SWIPE_THRESHOLD = 40; // px
+
+    // Lazy-load states for slides
+    let loaded: boolean[] = [];
+    function markLoaded(i: number) {
+        loaded[i] = true;
+        // reassign to notify Svelte
+        loaded = [...loaded];
+    }
+    function imgReady(node: HTMLImageElement, i: number) {
+        let idx = i;
+        const done = () => markLoaded(idx);
+        if (node.complete) done();
+        node.addEventListener('load', done);
+        node.addEventListener('error', done);
+        const t = setTimeout(done, 3000);
+        return {
+            update(newI: number) {
+                idx = newI;
+                if (node.complete) done();
+            },
+            destroy() {
+                node.removeEventListener('load', done);
+                node.removeEventListener('error', done);
+                clearTimeout(t);
+            }
+        };
+    }
+    // initialize on images change
+    $: if (images && loaded.length !== images.length) {
+        loaded = images.map(() => false);
+    }
 </script>
 
 <div class="relative w-full overflow-hidden rounded-lg aspect-[16/9] carousel">
@@ -125,10 +156,24 @@
             </div>
         {:else}
             {#each images as src, i}
-                <div class="slide w-full flex-shrink-0">
+                <div class="slide relative w-full flex-shrink-0">
+                    {#if !loaded[i]}
+                        <div class="absolute inset-0 shimmer" aria-hidden="true"></div>
+                    {/if}
                     <img
                         {src}
                         alt={`Carousel image ${i + 1} of ${images.length}`}
+                        width="1600"
+                        height="900"
+                        loading={i === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                        fetchpriority={i === currentIndex ? "high" : "low"}
+                        class:opacity-0={!loaded[i]}
+                        class:opacity-100={loaded[i]}
+                        class="block w-full h-full object-cover transition-opacity duration-300 ease-out"
+                        use:imgReady={i}
+                        on:load={() => markLoaded(i)}
+                        on:error={() => markLoaded(i)}
                     />
                 </div>
             {/each}
@@ -146,11 +191,12 @@
                     aria-label={`Go to image ${i + 1}`}
                     aria-current={i === currentIndex ? "true" : "false"}
                     on:click={() => goTo(i)}
-                    on:focus={(e) => (e.currentTarget as HTMLButtonElement).blur()}
+                    on:focus={(e) =>
+                        (e.currentTarget as HTMLButtonElement).blur()}
                 >
                     <span
                         class="bullet-inner block h-full w-full rounded-full"
-                        style={`background-color: ${i === currentIndex ? '#00c6ff' : '#ffffff'}; transform: scale(${i === currentIndex ? 1 : 0.4});`}
+                        style={`background-color: ${i === currentIndex ? "#006cff" : "#ffffff"}; transform: scale(${i === currentIndex ? 1 : 0.4});`}
                     ></span>
                 </button>
             {/each}
@@ -166,12 +212,24 @@
         height: 100%;
         object-fit: cover;
     }
+    /* Shimmer placeholder */
+    .shimmer {
+        background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.08) 100%);
+        background-size: 200% 100%;
+        animation: shimmer 1.2s infinite;
+    }
+    @keyframes shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
     /* Bullet inner dot with strong, scalable shadow and smooth transitions */
     .bullet-inner {
         box-shadow:
             0 8px 36px rgba(10, 18, 31, 0.85),
             0 0 0 2px rgba(10, 18, 31, 0.45);
-        transition: background-color 1s ease-in-out, transform 1s ease-in-out;
+        transition:
+            background-color 1s ease-in-out,
+            transform 1s ease-in-out;
         will-change: background-color, transform;
     }
     /* Remove tap highlights on mobile */
@@ -196,5 +254,7 @@
         outline: none !important;
         box-shadow: none !important;
     }
-    .bullet-btn::-moz-focus-inner { border: 0; }
+    .bullet-btn::-moz-focus-inner {
+        border: 0;
+    }
 </style>

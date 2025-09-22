@@ -33,18 +33,10 @@
         isPressed = false;
     }
 
-    // Convert text to title case
-    function toTitleCase(text: string): string {
-        return text.replace(
-            /\w\S*/g,
-            (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(),
-        );
-    }
-
     // Get button classes based on variant and state
     function getButtonClasses(): string {
         const baseClasses =
-            "inline-flex items-center justify-center px-6 py-3 rounded font-urbanist font-semibold text-button transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2 focus:ring-offset-secondary focus-visible:outline-none box-border";
+            "inline-flex w-auto max-w-max items-center justify-center px-6 py-3 rounded font-urbanist font-semibold text-button transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2 focus:ring-offset-secondary focus-visible:outline-none box-border";
 
         switch (variant) {
             case "primary":
