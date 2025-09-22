@@ -16,6 +16,7 @@
     import packetTracersImg from "$lib/assets/images/projects/packet_tracers.png";
     import luxMundiImg from "$lib/assets/images/projects/lux_mundi.png";
     import dichotomiaImg from "$lib/assets/images/projects/dichotomia.png";
+    import atWorldsEndImg from "$lib/assets/images/projects/awe.png";
     import gamecampImg from "$lib/assets/images/events/taltech_gamecamp.jpg";
     import gamedevGuildImg from "$lib/assets/images/events/gamedev_guild.png";
     import taltechItImg from "$lib/assets/images/orgs/taltech_it.jpg";
@@ -100,7 +101,11 @@
                 on:click={scrollToTop}
                 aria-label="Scroll to top"
             >
-                <img src={`${base}/favicon/favicon.svg`} alt="AlacrisDevs Logo" class="w-10 h-10" />
+                <img
+                    src={`${base}/favicon/favicon.svg`}
+                    alt="AlacrisDevs Logo"
+                    class="w-10 h-10"
+                />
             </button>
 
             <!-- Desktop Navigation -->
@@ -356,7 +361,7 @@
                     target="_blank"
                 />
                 <Card
-                    imageSrc={luxMundiImg}
+                    imageSrc={atWorldsEndImg}
                     imageAlt={m.projects_awe_title()}
                     title={m.projects_awe_title()}
                     description={m.projects_awe_desc()}
@@ -605,6 +610,10 @@
 </footer>
 
 <style>
-    .translate-y-6 { transform: translateY(1.5rem); }
-    .translate-y-0 { transform: translateY(0); }
+    .translate-y-6 {
+        transform: translateY(1.5rem);
+    }
+    .translate-y-0 {
+        transform: translateY(0);
+    }
 </style>
