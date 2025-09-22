@@ -66,11 +66,11 @@ A curated selection of photos and highlights from events and projects. Captions 
 
 ## Get in Touch
 
-- Email: alacrisdevs@gmail.com
+- Email: info@alacris.dev
 - Contact form is provided on the site; if it doesn’t work for you, email is the preferred fallback.
 
 ---
 
 ## License
 
-All rights reserved. Contact for collaboration or permissions: `alacrisdevs@gmail.com`.
+All rights reserved. Contact for collaboration or permissions: `info@alacris.dev`.

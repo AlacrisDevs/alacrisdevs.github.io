@@ -49,7 +49,7 @@
         const body = encodeURIComponent(
             `Name: ${name}\nEmail: ${email}\n\n${message}`,
         );
-        window.location.href = `mailto:alacrisdevs@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:info@alacris.dev?subject=${subject}&body=${body}`;
     }
 
     function scrollToTop() {
@@ -470,9 +470,9 @@
             </h2>
             <div class="flex justify-center mb-8">
                 <a
-                    href="mailto:alacrisdevs@gmail.com"
+                    href="mailto:info@alacris.dev"
                     class="flex items-center gap-2 text-white hover:text-primary transition-colors"
-                    aria-label="Email alacrisdevs@gmail.com"
+                    aria-label="Email info@alacris.dev"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -483,7 +483,7 @@
                             d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0120.25 19.5H3.75A2.25 2.25 0 011.5 17.25V6.75zm2.852-.75a.75.75 0 00-.602 1.2l6.398 8.254a1.5 1.5 0 002.404 0l6.398-8.254a.75.75 0 00-.602-1.2H4.352z"
                         /></svg
                     >
-                    <span class="underline">alacrisdevs@gmail.com</span>
+                    <span class="underline">info@alacris.dev</span>
                 </a>
             </div>
             <div class="max-w-2xl mx-auto">
