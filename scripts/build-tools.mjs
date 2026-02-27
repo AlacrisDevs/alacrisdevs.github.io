@@ -24,7 +24,7 @@ function run(command, args, options = {}) {
 			cwd: options.cwd,
 			env: options.env,
 			stdio: 'inherit',
-			shell: process.platform === 'win32'
+			shell: true
 		});
 
 		child.on('error', reject);
