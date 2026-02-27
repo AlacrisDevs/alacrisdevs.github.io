@@ -9,6 +9,7 @@ lerna-debug.log*
 # Output
 /.svelte-kit
 /build
+/static/tools
 dist/
 dist-ssr/
 .output

@@ -1,7 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const basePath = process.env.BASE_PATH || '';
+// Keep main-site base separate from nested tool BASE_PATH values.
+const siteBasePath = process.env.SITE_BASE_PATH || '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -19,7 +20,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: basePath
+			base: siteBasePath
 		},
 		prerender: {
 			// Avoid build failures if the crawler hits asset URLs (e.g., favicons)

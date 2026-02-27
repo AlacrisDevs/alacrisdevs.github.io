@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+:root {
+  /* Sidebar colors - Light mode */
+  --sidebar-bg: #F0F4FA;
+  --sidebar-header-bg: #E8EDF5;
+  --sidebar-dropdown-bg: #F0F4FA;
+
+  /* Sidebar colors - Dark mode */
+  --sidebar-bg-dark: #0D1929;
+  --sidebar-header-bg-dark: #0A121F;
+  --sidebar-dropdown-bg-dark: #0D1929;
+}
+
+html, body {
+  background-color: #0A121F;
+  color: #FFFFFF;
+}
+
+.dark {
+  --sidebar-bg: var(--sidebar-bg-dark);
+  --sidebar-header-bg: var(--sidebar-header-bg-dark);
+  --sidebar-dropdown-bg: var(--sidebar-dropdown-bg-dark);
+}
+
+/* Hide number input spinner buttons globally */
+input[type="number"] {
+  -moz-appearance: textfield !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  display: none !important;
+}
+
+input[type="number"]::-moz-number-spin-up,
+input[type="number"]::-moz-number-spin-down {
+  display: none !important;
+}
+
+@layer components {
+  /* Sidebar Layout Components */
+  .sidebar-section-spacing {
+    @apply space-y-6;
+  }
+
+  .sidebar-subsection-spacing {
+    @apply space-y-3;
+  }
+
+  .sidebar-tight-spacing {
+    @apply space-y-2;
+  }
+
+  /* Typography Components */
+  .sidebar-label {
+    @apply text-[14px] mb-2;
+  }
+
+  .sidebar-label-light {
+    @apply text-white/40;
+  }
+
+  .sidebar-label-dark {
+    @apply text-black/40;
+  }
+
+  .sidebar-text-primary-light {
+    @apply text-white/70;
+  }
+
+  .sidebar-text-primary-dark {
+    @apply text-black/70;
+  }
+
+  .sidebar-text-secondary-light {
+    @apply text-white/30;
+  }
+
+  .sidebar-text-secondary-dark {
+    @apply text-black/30;
+  }
+
+  /* Button Components */
+  .sidebar-button-base {
+    @apply py-2 text-[14px];
+  }
+
+  .sidebar-button-primary-light {
+    @apply bg-white/15 text-white;
+  }
+
+  .sidebar-button-primary-dark {
+    @apply bg-black/15 text-black;
+  }
+
+  .sidebar-button-secondary-light {
+    @apply bg-white/5 text-white/70 hover:bg-white/10;
+  }
+
+  .sidebar-button-secondary-dark {
+    @apply bg-black/5 text-black/70 hover:bg-black/10;
+  }
+
+  .sidebar-button-tertiary-light {
+    @apply bg-white/5 text-white/40 hover:bg-white/10;
+  }
+
+  .sidebar-button-tertiary-dark {
+    @apply bg-black/5 text-black/40 hover:bg-black/10;
+  }
+
+  /* Layout Components */
+  .sidebar-flex-row {
+    @apply flex gap-2;
+  }
+
+  .sidebar-flex-row-tight {
+    @apply flex gap-1;
+  }
+
+  .sidebar-grid-2 {
+    @apply grid grid-cols-2 gap-2;
+  }
+
+  .sidebar-grid-3 {
+    @apply grid grid-cols-3 gap-2;
+  }
+
+  .sidebar-column-headers {
+    @apply flex items-center gap-2 mb-1;
+  }
+
+  /* Form Components */
+  .sidebar-input-base {
+    @apply w-full h-8 px-3 text-[14px] focus:outline-none;
+  }
+
+  .sidebar-input-light {
+    @apply bg-white/5 text-white placeholder:text-white/30 focus:bg-white/10;
+  }
+
+  .sidebar-input-dark {
+    @apply bg-black/5 text-black placeholder:text-black/30 focus:bg-black/10;
+  }
+
+  /* Component Sizing */
+  .sidebar-delete-button {
+    @apply w-8 h-8 shrink-0 flex items-center justify-center hover:text-red-400 hover:bg-red-500/10;
+  }
+
+  .sidebar-width-fixed-small {
+    @apply w-8 shrink-0;
+  }
+
+  .sidebar-width-fixed-medium {
+    @apply w-10 shrink-0;
+  }
+
+  .sidebar-width-flex {
+    @apply flex-1;
+  }
+
+  .sidebar-width-flex-min {
+    @apply flex-1 min-w-0;
+  }
+}

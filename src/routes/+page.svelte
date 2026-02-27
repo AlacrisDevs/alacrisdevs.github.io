@@ -372,7 +372,7 @@
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="py-20 bg-tertiary/10">
+    <section id="events" class="py-20 bg-secondary">
         <div class="w-full px-[6%]">
             <h2 class="h2 text-center text-white mb-12">
                 {m.events_heading()}
@@ -446,7 +446,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-tertiary/10">
+    <section id="gallery" class="py-20 bg-secondary">
         <div class="w-full px-[6%]">
             <Gallery />
         </div>
@@ -549,7 +549,7 @@
 <footer class="bg-secondary py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col items-center gap-4">
-            <p class="small text-white/80">© 2021-2025 AlacrisDevs</p>
+            <p class="small text-white/80">© 2021-2026 AlacrisDevs</p>
             <div
                 class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap"
             >

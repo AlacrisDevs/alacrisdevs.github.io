@@ -1,0 +1,51 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Audio Visualizer Tool Card</title>
+  <desc id="desc">Dark themed card with glowing audio bars and circular waveforms</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101D33"/>
+      <stop offset="1" stop-color="#050A14"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(820 430) rotate(90) scale(390 620)">
+      <stop stop-color="#1B67FF" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#1B67FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bars" x1="260" y1="690" x2="1340" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D1FF"/>
+      <stop offset="1" stop-color="#4C7BFF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" rx="24" fill="url(#bg)"/>
+  <rect x="44" y="44" width="1512" height="812" rx="16" stroke="#E9F2FF" stroke-opacity="0.16" stroke-width="2"/>
+
+  <ellipse cx="820" cy="430" rx="620" ry="390" fill="url(#pulse)"/>
+  <circle cx="820" cy="430" r="255" stroke="#E9F2FF" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="820" cy="430" r="170" stroke="#E9F2FF" stroke-opacity="0.28" stroke-width="2"/>
+
+  <g opacity="0.9">
+    <rect x="300" y="500" width="26" height="190" rx="13" fill="url(#bars)"/>
+    <rect x="350" y="445" width="26" height="245" rx="13" fill="url(#bars)"/>
+    <rect x="400" y="475" width="26" height="215" rx="13" fill="url(#bars)"/>
+    <rect x="450" y="410" width="26" height="280" rx="13" fill="url(#bars)"/>
+    <rect x="500" y="455" width="26" height="235" rx="13" fill="url(#bars)"/>
+    <rect x="550" y="390" width="26" height="300" rx="13" fill="url(#bars)"/>
+    <rect x="600" y="430" width="26" height="260" rx="13" fill="url(#bars)"/>
+    <rect x="650" y="470" width="26" height="220" rx="13" fill="url(#bars)"/>
+    <rect x="700" y="420" width="26" height="270" rx="13" fill="url(#bars)"/>
+    <rect x="750" y="380" width="26" height="310" rx="13" fill="url(#bars)"/>
+    <rect x="800" y="430" width="26" height="260" rx="13" fill="url(#bars)"/>
+    <rect x="850" y="400" width="26" height="290" rx="13" fill="url(#bars)"/>
+    <rect x="900" y="440" width="26" height="250" rx="13" fill="url(#bars)"/>
+    <rect x="950" y="390" width="26" height="300" rx="13" fill="url(#bars)"/>
+    <rect x="1000" y="460" width="26" height="230" rx="13" fill="url(#bars)"/>
+    <rect x="1050" y="420" width="26" height="270" rx="13" fill="url(#bars)"/>
+    <rect x="1100" y="470" width="26" height="220" rx="13" fill="url(#bars)"/>
+    <rect x="1150" y="435" width="26" height="255" rx="13" fill="url(#bars)"/>
+    <rect x="1200" y="500" width="26" height="190" rx="13" fill="url(#bars)"/>
+    <rect x="1250" y="460" width="26" height="230" rx="13" fill="url(#bars)"/>
+  </g>
+
+  <text x="128" y="162" fill="#E9F2FF" fill-opacity="0.9" font-family="Urbanist, Arial, sans-serif" font-size="58" font-weight="700">Audio Visualizer</text>
+  <text x="128" y="220" fill="#E9F2FF" fill-opacity="0.72" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400">Realtime waveform playground</text>
+</svg>
