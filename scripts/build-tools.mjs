@@ -70,8 +70,9 @@ async function buildTool(toolName, basePath) {
 	}
 
 	console.log(`[tools] Building ${toolName} (BASE_PATH='${scopedBasePath}')...`);
-	// Use npx vite build directly to avoid npm script resolution picking up root package.json
-	await run('npx', ['vite', 'build'], {
+	// Use the tool's local vite binary to avoid npm/npx resolution issues
+	const viteBin = path.join(toolDir, 'node_modules', '.bin', 'vite');
+	await run(viteBin, ['build'], {
 		cwd: toolDir,
 		env: {
 			...process.env,
